@@ -32,9 +32,4 @@ Exact = identical value. Exact + tolerance = exact, plus gap ≤ 0.1% or ≤ the
 
 ## Notebooks
 
-| Prototype | Notebook |
-|-----------|----------|
-| 4 Override method | `core_comparison_v1_1.ipynb` |
-| 5 PDF v/s Ground Truth | `LLMFA_PDF_text_route_v1_3.ipynb` |
-| 6 Hybrid A | `LLMFA_Hybrid_A_pdf_override.ipynb` |
-| 1–3, 7–10 | filename not stated in the prototype reports; fill in before pushing |
+The locked prototype (row 10) is included as `prototype/LLMFA_prototype_v4_locked.ipynb`. Its last cells write `accuracy_check_199.csv` and `accuracy_summary_199.csv`, the row-level check for the 199 values. The other nine prototypes are not included; their numbers come from the results reports written at the time of each run. The release notebook, `notebook/LLMFA_v4_final.ipynb`, is the cleaned implementation of row 10.

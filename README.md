@@ -6,7 +6,7 @@ You upload annual-report (FY) PDFs and pick the companies. The notebook reads th
 
 > **Not financial advice.** The output is informational. Valuations depend on assumptions you can change in Cell 1 (for example cost of equity 12% and terminal growth 5%), and web data can change between runs.
 
-Release: **v4.0.0** · Notebook: `LLMFA_v4_final.ipynb`
+Release: **v4.0.0** · Notebook: `notebook/LLMFA_v4_final.ipynb`
 
 ## What you get
 
@@ -65,9 +65,9 @@ Results are saved to your own Google Drive (under `BASE_DIR`) and also downloade
 
 ## Quick start
 
-1. Open `LLMFA_v4_final.ipynb` in Google Colab (or locally with a GPU) and select a GPU runtime.
+1. Open `notebook/LLMFA_v4_final.ipynb` in Google Colab (or locally with a GPU) and select a GPU runtime.
 2. In the first cell, set `BASE_DIR` to a folder of your own. Put your reports in `BASE_DIR/FY_Reports/`, named `COMPANY_YEAR.pdf`, for example `HAL_2025.pdf`. YEAR is the financial-year end year (FY 2024-25 is 2025).
-3. Also place `22_questions_LLM.json` (and `LLM_api_calling_questions.json` for the research stage) in `BASE_DIR`.
+3. Copy `22_questions_LLM.json` (and `LLM_api_calling_questions.json` for the research stage) from the `questions_and_chart_details/` folder into `BASE_DIR`.
 4. Run the setup cells, Cell 1 (settings) and Cell 2 (company picker). Pick the companies, then run Cell 2B and every cell after it up to Cell 24.
 5. Cell 24 builds the full report (every question and answer for each selected company, all charts, share-price charts) and downloads it. Read it and decide which company you like most.
 6. Research stage (optional, one company): run Cells 25–27. Cell 25 selects the company, Cell 26 runs the 6 live research questions, and Cell 27 builds that company's final report and downloads it.
@@ -80,7 +80,8 @@ The main output is the HTML report. The tables behind it (including the verified
 ## Repository layout
 
 ```
-LLMFA_v4_final.ipynb     the model notebook
+notebook/                the model notebook (LLMFA_v4_final.ipynb)
+questions_and_chart_details/ the question and chart files: 22 questions, 7 charts, 6 research questions
 prototype/               the locked prototype notebook (research version, 199-value result)
 README.md
 ACCURACY.md              accuracy tables

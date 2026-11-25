@@ -1,12 +1,16 @@
-# What the analysis covers
+# Features
+
+What LLMFA gives an investor, and how saving everything to Google Drive makes it more useful.
+
+## What the analysis covers
 
 The notebook does not stop at extracting numbers. Three question and chart files define what an investor gets for each company: where it has been (past), where it stands (present) and what could move it next (outlook).
 
 | File | What it defines | Time focus | Data it uses |
 |------|-----------------|------------|--------------|
-| `22_questions_LLM.json` | 22 financial questions, answered per company | Past and present | Annual-report values, plus dated market data |
-| `Graph_Charts_details.json` | 7 chart modules (plus one compact table) | Past, latest year, scenarios | Annual-report values, plus dated market data |
-| `LLM_api_calling_questions.json` | 6 live research questions, for one company | Present and outlook | Live web search (Tavily) written up by Gemini |
+| `questions_and_chart_details/22_questions_LLM.json` | 22 financial questions, answered per company | Past and present | Annual-report values, plus dated market data |
+| `questions_and_chart_details/Graph_Charts_details.json` | 7 chart modules (plus one compact table) | Past, latest year, scenarios | Annual-report values, plus dated market data |
+| `questions_and_chart_details/LLM_api_calling_questions.json` | 6 live research questions, for one company | Present and outlook | Live web search (Tavily) written up by Gemini |
 
 ## 1. The 22 questions: how the business has performed
 
@@ -63,6 +67,19 @@ A compact table covers shareholder returns (EPS growth, dividends, buybacks, dil
 | 6 | Upcoming products, launches, capacity expansions, order wins and approvals, separated into announced, under execution, proposed, rumour and inference |
 
 The research rules require cited sources with links and dates, a clear split between verified facts, forecasts and inference, a search for negative evidence, no invented figures, and no buy or sell recommendation.
+
+## Saved to your Google Drive
+
+The notebook runs in Google Colab, but your work does not stay inside the Colab session. Your FY reports, the live web data and every result are kept in your own Drive folder (`BASE_DIR`), and the results are also downloaded to your computer automatically. They are small and take very little storage.
+
+For each run it saves the full HTML report, the tables behind it (question answers, scenario table, verified facts, commentary) and the frozen rule that produced it. The full folder layout is in [DYNAMIC_DATASET.md](DYNAMIC_DATASET.md).
+
+What this gives you:
+- **Nothing is lost when Colab disconnects.** The session resets, but your results stay in Drive.
+- **Your own dataset.** You upload the FY reports of the companies you care about, and the dataset keeps growing as you add more, built for your investments rather than a standard company list. No large PDF library on your computer.
+- **A personal research library.** Analyse 4 companies today and come back to them next month; each run is saved with its date.
+- **Faster, lighter repeat runs.** PDFs and web data are reused instead of downloaded again.
+- **Private by default.** Reports and data sit in your own Drive. Your API keys stay in Colab Secrets and are not written to the saved files.
 
 ## Why this design
 
