@@ -1,0 +1,63 @@
+{
+  "project": "LLMFA",
+  "purpose": "Web-search-based company and sector intelligence",
+  "variables": {
+    "company_name": "{company_name}",
+    "sector_name": "{sector_name}",
+    "research_date": "{research_date}",
+    "primary_market": "India"
+  },
+  "questions": [
+    {
+      "id": "Q1",
+      "title": "Government Investment & Policy Support",
+      "prompt": "How much is the Indian government investing in or allocating to {sector_name} through the latest Union Budget, government schemes, subsidies, incentives, and major projects? Compare allocations with previous years, distinguish announced investments from approved funding and actual expenditure, and explain which initiatives could benefit {company_name}."
+    },
+    {
+      "id": "Q2",
+      "title": "Global Trends, Worldwide Mindset & Applications",
+      "prompt": "How does the world perceive and prioritise {sector_name}, and how is its global importance evolving? Explain its direct and indirect applications across industries and everyday life, emerging technologies, geopolitical significance, changing business needs, and the major global trends driving or potentially reducing demand over the next 5–10 years."
+    },
+    {
+      "id": "Q3",
+      "title": "Global & Indian Industry Outlook",
+      "prompt": "How has demand for {sector_name} changed over the past five years, and how is it expected to evolve over the next 3–5 years? Compare India with leading global markets, identify major growth drivers and opportunities, and analyse supply versus demand, competition, industry cyclicality, government policies, geopolitical dependencies, and risks. Include credible market data, growth rates, and forecasts where available."
+    },
+    {
+      "id": "Q4",
+      "title": "Company Position & Ability to Benefit",
+      "prompt": "Considering {company_name}'s products, customers, competitive advantages, expansion plans, and financial performance, how well is it positioned to benefit from global trends, Indian industry growth, and government initiatives? Analyse its direct and indirect exposure to growing markets, competitive position against major Indian and global peers, potential revenue and profitability opportunities, and evidence that supports or challenges its ability to capture industry growth."
+    },
+    {
+      "id": "Q5",
+      "title": "Future Outlook, Valuation, Catalysts & Risks",
+      "prompt": "What are the most important developments that could affect {company_name} and its sector over the next 1–3 years? Present optimistic, base, and pessimistic scenarios; assess upcoming policy changes, technological developments, demand shifts, expansion plans, competitive threats, and other catalysts. Explain how these scenarios could affect the company's growth and profitability, whether its current market valuation appears to reflect its future prospects, what risks could undermine the investment thesis, and which indicators investors should monitor."
+    },
+    {
+      "id": "Q6",
+      "title": "Upcoming Products, Launches & Future Growth Catalysts",
+      "prompt": "What upcoming developments could significantly accelerate the growth of {company_name} over the next 1–3 years? Investigate upcoming product launches, new product categories, technological developments, R&D commercialisation, manufacturing capacity expansions, new facilities, market expansions, major contracts or order wins, strategic partnerships, acquisitions, and pending regulatory approvals. For each development, explain what it involves, its expected timeline, current status, potential impact on the company's revenue, profitability and competitive position, and the evidence supporting its significance. Distinguish between officially announced developments, projects under execution, proposed plans, market rumours and your own analytical inferences. Assess whether these developments could become meaningful growth catalysts, what could prevent their success, and which future announcements or milestones investors should monitor. Do not assume that a product launch or expansion will automatically translate into financial success."
+    }
+  ],
+  "shared_research_instructions": [
+    "Research date: {research_date}",
+    "Company: {company_name}",
+    "Sector: {sector_name}",
+    "Primary market: India",
+    "Use web search to obtain current, verifiable information.",
+    "Prioritise official government documents, company filings, industry associations, official statistics, and reputable research.",
+    "Cite sources with links and publication dates for important claims.",
+    "Include quantitative evidence wherever reliable data is available.",
+    "Distinguish verified facts, forecasts, and analytical inferences.",
+    "Separate proposed, announced, approved, committed, and actually disbursed investments.",
+    "Connect global and Indian industry trends to the specific company's products, customers, financial performance, and competitive position.",
+    "Investigate negative evidence, industry cyclicality, oversupply, competition, and downside risks.",
+    "For forecasts and scenarios, state assumptions, time horizons, and uncertainties.",
+    "Assess valuation using current, dated market information when available. Do not invent share prices, financial multiples, or future returns.",
+    "Avoid repeating findings already covered by other questions.",
+    "Never invent figures or sources. Clearly identify unavailable, conflicting, or unverified information.",
+    "Keep each answer concise, prioritising findings that could materially affect the company's long-term prospects.",
+    "Conclude with the strongest supporting evidence, the biggest risks, and the key indicators to monitor.",
+    "Do not provide a definitive buy or sell recommendation solely from this research."
+  ]
+}

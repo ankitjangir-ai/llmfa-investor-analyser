@@ -1,0 +1,26 @@
+# secrets
+.env
+*.key
+secrets*
+# python / jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+# data and model files (not published)
+FY_Reports/
+Final_Output/
+_cache/
+_pdf_local/
+raw_web/
+*.pdf
+*.safetensors
+*.bin
+*.gguf
+# os / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+!SECRETS.md

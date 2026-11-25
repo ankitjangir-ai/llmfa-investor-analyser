@@ -1,0 +1,847 @@
+{
+  "project": {
+    "name": "LLMFA Financial Analysis Dashboard",
+    "version": "2.0",
+    "purpose": "Analyse a company's historical financial performance, latest-year changes, financial strength, valuation, and transparent future scenarios using traceable data.",
+    "currency_default": "INR",
+    "display_unit_default": "INR crore",
+    "historical_window_years": 5,
+    "latest_year_comparison": "Latest available completed financial year versus the immediately preceding comparable financial year",
+    "forecast_horizon_years": [
+      1,
+      2,
+      3
+    ],
+    "design_principles": [
+      "Keep seven primary chart modules; do not add charts merely to increase chart count.",
+      "Use source-traceable figures and clearly distinguish reported values from derived metrics.",
+      "Never silently mix consolidated and standalone data.",
+      "Represent missing values as null, never as zero.",
+      "Show actuals, company guidance, sourced analyst estimates, and model scenarios distinctly.",
+      "Use sector-specific metrics for banks, NBFCs, insurers, and other businesses where general industrial-company ratios are unsuitable.",
+      "Every chart should answer a clear financial question and provide concise, evidence-based observations."
+    ]
+  },
+  "data_contract": {
+    "required_dimensions": [
+      "company_name",
+      "ticker_or_company_identifier",
+      "financial_year",
+      "period_end_date",
+      "reporting_basis",
+      "currency",
+      "original_unit",
+      "normalized_unit",
+      "source_document",
+      "source_page_or_section",
+      "source_url_if_available",
+      "value_status",
+      "actual_or_forecast",
+      "restatement_status",
+      "validation_status"
+    ],
+    "value_status_allowed": [
+      "reported",
+      "derived",
+      "estimated"
+    ],
+    "actual_or_forecast_allowed": [
+      "actual",
+      "company_guidance",
+      "analyst_estimate",
+      "model_scenario"
+    ],
+    "reporting_basis_allowed": [
+      "consolidated",
+      "standalone",
+      "not_applicable"
+    ],
+    "validation_status_allowed": [
+      "validated",
+      "warning",
+      "unverified",
+      "missing"
+    ],
+    "core_raw_variables": [
+      {
+        "name": "revenue_from_operations",
+        "label": "Revenue from Operations",
+        "unit": "INR crore",
+        "statement": "income_statement"
+      },
+      {
+        "name": "ebit",
+        "label": "EBIT / Operating Profit",
+        "unit": "INR crore",
+        "statement": "income_statement",
+        "definition_note": "Use one documented EBIT definition consistently; do not silently substitute another reported subtotal."
+      },
+      {
+        "name": "ebitda",
+        "label": "EBITDA",
+        "unit": "INR crore",
+        "statement": "income_statement",
+        "definition_note": "Prefer reported EBITDA when clearly defined; otherwise derive only using a documented formula."
+      },
+      {
+        "name": "pat",
+        "label": "Profit After Tax",
+        "unit": "INR crore",
+        "statement": "income_statement"
+      },
+      {
+        "name": "operating_cash_flow",
+        "label": "Cash Flow from Operating Activities",
+        "unit": "INR crore",
+        "statement": "cash_flow"
+      },
+      {
+        "name": "capex",
+        "label": "Capital Expenditure",
+        "unit": "INR crore",
+        "statement": "cash_flow",
+        "sign_convention": "Store/display capex as a positive spending amount for FCF calculation; preserve original reported sign in source record."
+      },
+      {
+        "name": "total_assets",
+        "label": "Total Assets",
+        "unit": "INR crore",
+        "statement": "balance_sheet"
+      },
+      {
+        "name": "shareholders_equity",
+        "label": "Shareholders' Equity",
+        "unit": "INR crore",
+        "statement": "balance_sheet"
+      },
+      {
+        "name": "interest_bearing_debt",
+        "label": "Interest-Bearing Debt",
+        "unit": "INR crore",
+        "statement": "balance_sheet",
+        "definition_note": "Document which short-term and long-term borrowings/lease liabilities are included."
+      },
+      {
+        "name": "cash_and_cash_equivalents",
+        "label": "Cash and Cash Equivalents",
+        "unit": "INR crore",
+        "statement": "balance_sheet"
+      },
+      {
+        "name": "current_assets",
+        "label": "Current Assets",
+        "unit": "INR crore",
+        "statement": "balance_sheet"
+      },
+      {
+        "name": "current_liabilities",
+        "label": "Current Liabilities",
+        "unit": "INR crore",
+        "statement": "balance_sheet"
+      },
+      {
+        "name": "finance_costs",
+        "label": "Finance Costs",
+        "unit": "INR crore",
+        "statement": "income_statement"
+      },
+      {
+        "name": "trade_receivables",
+        "label": "Trade Receivables",
+        "unit": "INR crore",
+        "statement": "balance_sheet"
+      },
+      {
+        "name": "inventory",
+        "label": "Inventories",
+        "unit": "INR crore",
+        "statement": "balance_sheet"
+      }
+    ],
+    "optional_variables": [
+      "cost_of_goods_sold",
+      "credit_sales",
+      "depreciation_and_amortisation",
+      "gross_profit",
+      "earnings_per_share",
+      "shares_outstanding",
+      "dividends_paid",
+      "dividend_per_share",
+      "share_buybacks",
+      "market_capitalisation",
+      "enterprise_value",
+      "share_price",
+      "company_guidance",
+      "segment_revenue",
+      "segment_profit",
+      "capital_employed",
+      "acquisition_spending",
+      "committed_capex"
+    ],
+    "unit_normalization": [
+      {
+        "from": "INR",
+        "to": "INR crore",
+        "operation": "divide_by_10000000"
+      },
+      {
+        "from": "INR lakh",
+        "to": "INR crore",
+        "operation": "divide_by_100"
+      },
+      {
+        "from": "INR million",
+        "to": "INR crore",
+        "operation": "divide_by_10"
+      }
+    ],
+    "source_priority": [
+      "Company annual report and audited financial statements",
+      "Official NSE/BSE filings and disclosures",
+      "Official company investor-relations disclosures",
+      "Reputable financial-data providers, with source and date recorded"
+    ],
+    "validation_rules": [
+      "Validate company identity, financial year, period-end date, reporting basis, currency, and units before plotting.",
+      "Do not silently mix consolidated and standalone data.",
+      "Missing values remain null; do not impute zero.",
+      "Flag restatements, reclassifications, changes in accounting definitions, and unusual fiscal-year lengths.",
+      "Store source-reported values separately from normalized and derived values.",
+      "Check ratios and growth rates for zero, negative, or otherwise unsuitable denominators.",
+      "Record market-data as-of date separately from financial-statement period.",
+      "Show warnings where data is incomplete or definitions are not comparable."
+    ]
+  },
+  "dashboard_summary_cards": [
+    {
+      "metric": "Revenue from Operations",
+      "period": "latest_available_fy",
+      "display": "INR crore"
+    },
+    {
+      "metric": "Revenue Growth",
+      "period": "latest_fy_yoy",
+      "display": "%"
+    },
+    {
+      "metric": "PAT",
+      "period": "latest_available_fy",
+      "display": "INR crore"
+    },
+    {
+      "metric": "PAT Growth",
+      "period": "latest_fy_yoy",
+      "display": "%"
+    },
+    {
+      "metric": "Operating Cash Flow",
+      "period": "latest_available_fy",
+      "display": "INR crore"
+    },
+    {
+      "metric": "Net Debt",
+      "period": "latest_available_fy",
+      "display": "INR crore"
+    },
+    {
+      "metric": "Operating Profit Margin",
+      "period": "latest_available_fy",
+      "display": "%"
+    },
+    {
+      "metric": "ROCE",
+      "period": "latest_available_fy",
+      "display": "%"
+    }
+  ],
+  "chart_sections": [
+    {
+      "id": "chart_01",
+      "title": "Revenue & Profit Growth",
+      "purpose": "Show the scale and direction of the company's business and earnings over time.",
+      "time_horizon": "Previous five financial years, or the longest comparable period available up to five years",
+      "chart_types": [
+        "multi-series line chart with metric selector",
+        "indexed trend chart",
+        "supporting table"
+      ],
+      "raw_data": [
+        "revenue_from_operations",
+        "ebit",
+        "ebitda",
+        "pat"
+      ],
+      "derived_metrics": [
+        {
+          "name": "revenue_growth_yoy",
+          "formula": "((current_revenue - previous_revenue) / abs(previous_revenue)) * 100",
+          "caveat": "Do not present as an ordinary growth rate when the prior value is zero or the sign change makes comparison misleading."
+        },
+        {
+          "name": "ebit_growth_yoy",
+          "formula": "((current_ebit - previous_ebit) / abs(previous_ebit)) * 100",
+          "caveat": "Apply denominator and sign-change checks."
+        },
+        {
+          "name": "ebitda_growth_yoy",
+          "formula": "((current_ebitda - previous_ebitda) / abs(previous_ebitda)) * 100",
+          "caveat": "Apply denominator and sign-change checks."
+        },
+        {
+          "name": "pat_growth_yoy",
+          "formula": "((current_pat - previous_pat) / abs(previous_pat)) * 100",
+          "caveat": "Flag transitions between profit and loss; do not imply a conventional growth rate where it is not meaningful."
+        },
+        {
+          "name": "five_year_cagr",
+          "formula": "((last_value / first_value) ** (1 / number_of_year_intervals) - 1) * 100",
+          "caveat": "Five annual observations normally represent four intervals; calculate only when endpoints are positive and comparable."
+        }
+      ],
+      "key_questions": [
+        "Is revenue growing consistently?",
+        "Are EBIT, EBITDA, and PAT growing faster or slower than revenue?",
+        "Is growth stable, accelerating, slowing, or volatile?"
+      ],
+      "visual_rules": [
+        "Do not put revenue, EBIT, EBITDA, and PAT on one unlabelled axis if their scales obscure smaller series.",
+        "Offer metric selection or indexed trends with a clearly stated base year of 100.",
+        "Show units, financial years, reporting basis, and missing periods."
+      ],
+      "automated_insights": [
+        "Largest year-on-year change",
+        "Revenue versus profit-growth divergence",
+        "Five-year trend or CAGR where meaningful"
+      ],
+      "data_warnings": [
+        "Flag exceptional items or restatements where identified.",
+        "Keep definitions of EBIT and EBITDA consistent across years."
+      ]
+    },
+    {
+      "id": "chart_02",
+      "title": "Profitability & Capital Efficiency",
+      "purpose": "Evaluate margins and how effectively the company uses shareholder and operating capital.",
+      "time_horizon": "Previous five financial years",
+      "chart_types": [
+        "line chart for margins",
+        "separate line chart or metric selector for return ratios",
+        "supporting table"
+      ],
+      "raw_data": [
+        "revenue_from_operations",
+        "ebit",
+        "ebitda",
+        "pat",
+        "shareholders_equity",
+        "capital_employed"
+      ],
+      "derived_metrics": [
+        {
+          "name": "operating_profit_margin",
+          "formula": "(EBIT / Revenue from Operations) * 100"
+        },
+        {
+          "name": "ebitda_margin",
+          "formula": "(EBITDA / Revenue from Operations) * 100"
+        },
+        {
+          "name": "net_profit_margin",
+          "formula": "(PAT / Revenue from Operations) * 100"
+        },
+        {
+          "name": "roe",
+          "formula": "(PAT / average_shareholders_equity) * 100",
+          "caveat": "Average equity normally uses opening and closing equity; document treatment when either is unavailable or negative."
+        },
+        {
+          "name": "roce",
+          "formula": "(EBIT / average_capital_employed) * 100",
+          "caveat": "Use one documented capital-employed definition consistently."
+        }
+      ],
+      "key_questions": [
+        "Are margins expanding or contracting?",
+        "Is the company earning stronger returns on capital?",
+        "Is growth accompanied by improving capital efficiency?"
+      ],
+      "visual_rules": [
+        "Use percentage axes and distinguish margin ratios from return ratios.",
+        "Do not compare ratios across companies without checking accounting definitions and sector comparability."
+      ],
+      "automated_insights": [
+        "Margin expansion or contraction",
+        "ROE/ROCE trend",
+        "Growth accompanied by improving or declining profitability"
+      ],
+      "data_warnings": [
+        "Ratios may be misleading with negative revenue, equity, or capital employed.",
+        "Banks and financial companies require sector-specific interpretation."
+      ]
+    },
+    {
+      "id": "chart_03",
+      "title": "Cash Flow & Earnings Quality",
+      "purpose": "Assess whether reported earnings convert into cash and how much cash remains after capital expenditure.",
+      "time_horizon": "Previous five financial years",
+      "chart_types": [
+        "grouped bar chart for PAT and operating cash flow",
+        "bar chart for CapEx and free cash flow",
+        "supporting ratio table"
+      ],
+      "raw_data": [
+        "pat",
+        "operating_cash_flow",
+        "capex",
+        "revenue_from_operations"
+      ],
+      "derived_metrics": [
+        {
+          "name": "free_cash_flow",
+          "formula": "Operating Cash Flow - CapEx",
+          "caveat": "CapEx must be normalized as a positive spending amount for this formula."
+        },
+        {
+          "name": "cash_conversion",
+          "formula": "Operating Cash Flow / PAT",
+          "caveat": "Show as unavailable or specially labelled when PAT is zero or negative."
+        },
+        {
+          "name": "operating_cash_flow_to_revenue",
+          "formula": "(Operating Cash Flow / Revenue from Operations) * 100"
+        }
+      ],
+      "key_questions": [
+        "Does operating cash flow broadly support reported PAT?",
+        "Is free cash flow positive and sustainable?",
+        "Is capital expenditure increasing, and is it being funded by operations or external capital?"
+      ],
+      "visual_rules": [
+        "Use a zero baseline where appropriate to show negative cash flow clearly.",
+        "Do not treat one year's negative FCF as automatically bad; explain the trend and investment context."
+      ],
+      "automated_insights": [
+        "PAT versus operating cash-flow divergence",
+        "FCF trend",
+        "CapEx burden and cash conversion trend"
+      ],
+      "data_warnings": [
+        "Cash flow can be volatile because of working capital and timing.",
+        "Separate recurring operating patterns from one-off transactions when data permits."
+      ]
+    },
+    {
+      "id": "chart_04",
+      "title": "Debt & Financial Safety",
+      "purpose": "Evaluate leverage, liquidity buffers, and the company's ability to service and repay debt.",
+      "time_horizon": "Previous five financial years, highlighting latest position",
+      "chart_types": [
+        "debt and cash trend chart",
+        "line chart for leverage ratios",
+        "latest-position summary table"
+      ],
+      "raw_data": [
+        "interest_bearing_debt",
+        "cash_and_cash_equivalents",
+        "shareholders_equity",
+        "ebit",
+        "ebitda",
+        "finance_costs"
+      ],
+      "derived_metrics": [
+        {
+          "name": "net_debt",
+          "formula": "Interest-Bearing Debt - Cash and Cash Equivalents"
+        },
+        {
+          "name": "debt_to_equity",
+          "formula": "Interest-Bearing Debt / Shareholders' Equity",
+          "caveat": "Not meaningful in the usual way when equity is zero or negative."
+        },
+        {
+          "name": "interest_coverage",
+          "formula": "EBIT / Finance Costs",
+          "caveat": "A simplified measure; document the definitions and handle zero finance costs."
+        },
+        {
+          "name": "net_debt_to_ebitda",
+          "formula": "Net Debt / EBITDA",
+          "caveat": "Use cautiously or mark not meaningful when EBITDA is zero or negative."
+        }
+      ],
+      "key_questions": [
+        "Is debt rising faster than earnings?",
+        "Does the company have enough cash and operating earnings to service debt?",
+        "Is the balance sheet becoming safer or more fragile?"
+      ],
+      "visual_rules": [
+        "Show debt and cash as separate series and net debt as a derived metric.",
+        "Distinguish gross debt from net debt.",
+        "Include the definition of debt used, including whether lease liabilities are included."
+      ],
+      "automated_insights": [
+        "Change in net debt",
+        "Interest-coverage trend",
+        "Leverage rising or falling relative to EBITDA"
+      ],
+      "data_warnings": [
+        "Negative net debt means net cash under the selected definition.",
+        "Financial-sector leverage should not be interpreted using industrial-company thresholds."
+      ]
+    },
+    {
+      "id": "chart_05",
+      "title": "Working Capital & Liquidity",
+      "purpose": "Identify short-term liquidity pressure and changes in cash tied up in receivables and inventory.",
+      "time_horizon": "Previous five financial years, highlighting latest position",
+      "chart_types": [
+        "current assets versus current liabilities chart",
+        "receivables and inventory trend",
+        "ratio and days table"
+      ],
+      "raw_data": [
+        "current_assets",
+        "current_liabilities",
+        "trade_receivables",
+        "inventory",
+        "revenue_from_operations",
+        "credit_sales",
+        "cost_of_goods_sold"
+      ],
+      "derived_metrics": [
+        {
+          "name": "current_ratio",
+          "formula": "Current Assets / Current Liabilities",
+          "caveat": "Not meaningful when current liabilities are zero; interpretation varies by sector."
+        },
+        {
+          "name": "receivables_days",
+          "formula": "(Average Trade Receivables / Credit Sales) * 365",
+          "fallback_formula": "(Average Trade Receivables / Revenue from Operations) * 365",
+          "caveat": "If credit sales are unavailable, label the revenue-based estimate as a proxy."
+        },
+        {
+          "name": "inventory_days",
+          "formula": "(Average Inventory / Cost of Goods Sold) * 365",
+          "caveat": "Requires a comparable COGS definition and appropriate average inventory data."
+        }
+      ],
+      "key_questions": [
+        "Are receivables taking longer to collect?",
+        "Is inventory accumulating faster than sales or cost of goods sold?",
+        "Is short-term liquidity improving or deteriorating?"
+      ],
+      "visual_rules": [
+        "Use average opening/closing balances for days-based metrics when available.",
+        "Label proxy calculations and show unavailable metrics rather than silently substituting values."
+      ],
+      "automated_insights": [
+        "Receivables-days increase or decrease",
+        "Inventory build-up",
+        "Current ratio trend"
+      ],
+      "data_warnings": [
+        "Seasonality can distort year-end balances.",
+        "This module needs sector-specific interpretation for many financial businesses."
+      ]
+    },
+    {
+      "id": "chart_06",
+      "title": "Latest FY vs Previous FY Financial Comparison",
+      "purpose": "Provide a direct, auditable comparison between the latest available completed financial year and the prior comparable year.",
+      "time_horizon": "Latest two comparable financial years",
+      "chart_types": [
+        "metric-selector grouped bar chart",
+        "comparison table"
+      ],
+      "required_metrics": [
+        "revenue_from_operations",
+        "ebit",
+        "ebitda",
+        "pat",
+        "operating_cash_flow",
+        "total_assets",
+        "interest_bearing_debt",
+        "shareholders_equity"
+      ],
+      "table_columns": [
+        "metric",
+        "previous_fy",
+        "latest_fy",
+        "absolute_change",
+        "yoy_percentage_change",
+        "unit",
+        "reporting_basis",
+        "source_reference",
+        "validation_status"
+      ],
+      "derived_metrics": [
+        {
+          "name": "absolute_change",
+          "formula": "Latest FY Value - Previous FY Value"
+        },
+        {
+          "name": "yoy_percentage_change",
+          "formula": "((Latest FY Value - Previous FY Value) / abs(Previous FY Value)) * 100",
+          "caveat": "Handle zero, negative, and sign-changing prior values explicitly; display not meaningful when needed."
+        }
+      ],
+      "key_questions": [
+        "What improved or deteriorated in the latest year?",
+        "Which key values changed the most in absolute and percentage terms?",
+        "Do profit and cash-flow changes tell the same story?"
+      ],
+      "visual_rules": [
+        "Do not place all eight metrics on one raw-value axis because scales differ.",
+        "Use a metric selector or separate appropriately scaled views.",
+        "Display financial year labels, units, reporting basis, and source references."
+      ],
+      "automated_insights": [
+        "Largest absolute movement",
+        "Largest meaningful percentage movement",
+        "Conflicting revenue, profit, and cash-flow trends"
+      ],
+      "data_warnings": [
+        "Compare like-for-like periods and the same reporting basis.",
+        "Flag changes caused by restatements or reclassification."
+      ]
+    },
+    {
+      "id": "chart_07",
+      "title": "Valuation & Future Outlook",
+      "purpose": "Compare current valuation with relevant peers and explore transparent possible financial outcomes.",
+      "time_horizon": {
+        "market_snapshot": "Latest available market data with a visible as-of date",
+        "historical_context": "Historical valuation multiples where reliable data is available",
+        "scenarios": "Next one to three financial years"
+      },
+      "chart_types": [
+        "peer scatter plot",
+        "historical valuation trend when reliable data exists",
+        "bear/base/bull scenario chart"
+      ],
+      "market_data": [
+        "share_price",
+        "shares_outstanding",
+        "market_capitalisation",
+        "enterprise_value",
+        "peer_valuation_multiples",
+        "market_data_as_of_date"
+      ],
+      "derived_metrics": [
+        {
+          "name": "market_capitalisation",
+          "formula": "Share Price * Shares Outstanding",
+          "caveat": "Use an appropriate share count and corporate-action-adjusted price where relevant."
+        },
+        {
+          "name": "enterprise_value",
+          "formula": "Market Capitalisation + Debt-Like Obligations - Cash and Cash Equivalents",
+          "caveat": "Document included debt-like obligations and use a consistent EV definition."
+        },
+        {
+          "name": "ev_to_ebitda",
+          "formula": "Enterprise Value / EBITDA",
+          "caveat": "Usually not meaningful when EBITDA is zero or negative."
+        },
+        {
+          "name": "pe_ratio",
+          "formula": "Market Capitalisation / Profit Attributable to Equity Shareholders",
+          "caveat": "Usually not meaningful when attributable earnings are zero or negative."
+        },
+        {
+          "name": "price_to_book",
+          "formula": "Market Capitalisation / Shareholders' Equity",
+          "caveat": "Interpret carefully when equity is zero or negative."
+        }
+      ],
+      "scenario_metrics": [
+        "revenue",
+        "ebit",
+        "pat",
+        "operating_cash_flow",
+        "capex",
+        "free_cash_flow"
+      ],
+      "scenario_formulas": [
+        {
+          "name": "forecast_revenue",
+          "formula": "Previous Year Revenue * (1 + Assumed Revenue Growth Rate)"
+        },
+        {
+          "name": "forecast_ebit",
+          "formula": "Forecast Revenue * Assumed EBIT Margin"
+        },
+        {
+          "name": "forecast_pat",
+          "formula": "Forecast Revenue * Assumed PAT Margin",
+          "caveat": "A simplified approach; assumptions should reflect financing costs, taxes, and exceptional items where possible."
+        },
+        {
+          "name": "forecast_free_cash_flow",
+          "formula": "Forecast Operating Cash Flow - Forecast CapEx"
+        }
+      ],
+      "scenario_requirements": [
+        "Create bear, base, and bull cases with explicit assumptions.",
+        "Record the source and rationale for company guidance or any external estimates.",
+        "Label model-generated values as scenarios, not predictions or reported facts.",
+        "Show sensitivity to revenue growth, margins, CapEx, and cash conversion where data supports it.",
+        "Compare peers only when business models, fiscal periods, and accounting definitions are reasonably comparable."
+      ],
+      "key_questions": [
+        "How does valuation compare with relevant peers and the company's own history?",
+        "What expectations may already be reflected in the current valuation?",
+        "What assumptions drive the bear, base, and bull scenarios?",
+        "How sensitive are projected earnings and cash flows to changes in assumptions?"
+      ],
+      "visual_rules": [
+        "Label market-data dates and valuation definitions.",
+        "Use sector-appropriate valuation metrics.",
+        "Separate actuals, company guidance, sourced analyst estimates, and model scenarios visually and in the data schema."
+      ],
+      "automated_insights": [
+        "Relative peer valuation with comparability caveats",
+        "Scenario range and key assumptions",
+        "Valuation sensitivity to growth and margin assumptions"
+      ],
+      "data_warnings": [
+        "Peer multiples can be misleading across sectors or accounting definitions.",
+        "Scenario outputs are not guaranteed predictions.",
+        "Do not use stale market prices without displaying their as-of date."
+      ]
+    }
+  ],
+  "additional_compact_section": {
+    "id": "shareholder_returns_and_capital_allocation",
+    "title": "Shareholder Returns & Capital Allocation",
+    "presentation": "Compact table or small supporting visual; not a new primary chart module by default",
+    "purpose": "Show whether company growth translates into per-share progress and how cash is allocated.",
+    "optional_metrics": [
+      {
+        "name": "eps_growth",
+        "label": "Earnings Per Share Growth",
+        "formula": "Calculate year-on-year change in EPS with zero/negative denominator safeguards."
+      },
+      {
+        "name": "shares_outstanding_change",
+        "label": "Change in Shares Outstanding",
+        "formula": "Latest shares outstanding - previous period shares outstanding"
+      },
+      {
+        "name": "dividend_payout_ratio",
+        "label": "Dividend Payout Ratio",
+        "formula": "Dividends attributable to ordinary shareholders / PAT attributable to ordinary shareholders",
+        "caveat": "Only when earnings and dividend definitions are comparable and the denominator is meaningful."
+      },
+      {
+        "name": "dividend_per_share",
+        "label": "Dividend Per Share",
+        "formula": "Use reported dividend per share and record the relevant financial year."
+      },
+      {
+        "name": "buybacks",
+        "label": "Share Buybacks",
+        "formula": "Use reported buyback data where available."
+      },
+      {
+        "name": "capex_and_acquisitions",
+        "label": "CapEx and Acquisitions",
+        "formula": "Show reported amounts separately where available."
+      }
+    ],
+    "key_questions": [
+      "Is EPS growing in line with total profit?",
+      "Has share issuance diluted existing shareholders?",
+      "How much capital is returned to shareholders versus reinvested?"
+    ],
+    "data_warnings": [
+      "Adjust interpretation for stock splits, bonus issues, buybacks, and other corporate actions.",
+      "Do not infer shareholder dilution from share-count changes without checking corporate actions."
+    ]
+  },
+  "cross_chart_insight_format": {
+    "maximum_observations_per_chart": 3,
+    "observation_fields": [
+      "what_changed",
+      "why_it_matters",
+      "what_to_investigate",
+      "supporting_metrics",
+      "data_limitations"
+    ],
+    "rules": [
+      "Every factual observation must be traceable to data or a source.",
+      "Do not claim causation from financial movements alone; describe possible explanations as hypotheses to investigate.",
+      "If data is insufficient, say so instead of fabricating an insight."
+    ]
+  },
+  "implementation_phases": [
+    {
+      "phase": 1,
+      "name": "Data extraction and validation",
+      "deliverables": [
+        "Canonical financial schema",
+        "Unit normalization",
+        "Source/page provenance",
+        "Consolidated/standalone checks",
+        "Missing-data and restatement flags"
+      ]
+    },
+    {
+      "phase": 2,
+      "name": "Historical financial charts",
+      "deliverables": [
+        "Chart 1: Revenue & Profit Growth",
+        "Chart 2: Profitability & Capital Efficiency",
+        "Chart 3: Cash Flow & Earnings Quality",
+        "Chart 4: Debt & Financial Safety",
+        "Chart 5: Working Capital & Liquidity"
+      ]
+    },
+    {
+      "phase": 3,
+      "name": "Latest-year comparison",
+      "deliverables": [
+        "Chart 6",
+        "Comparable-period checks",
+        "Auditable comparison table"
+      ]
+    },
+    {
+      "phase": 4,
+      "name": "Valuation and scenarios",
+      "deliverables": [
+        "Chart 7",
+        "Dated market data",
+        "Peer comparability checks",
+        "Bear/base/bull assumptions"
+      ]
+    },
+    {
+      "phase": 5,
+      "name": "Shareholder section and quality assurance",
+      "deliverables": [
+        "Shareholder returns and capital allocation section",
+        "Formula edge-case tests",
+        "Chart insight checks",
+        "Final data-quality report"
+      ]
+    }
+  ],
+  "testing_checklist": [
+    "JSON schema and required-field validation",
+    "Unit-conversion tests",
+    "Null handling tests",
+    "Zero and negative denominator tests",
+    "Sign-change growth tests",
+    "Five observations versus four CAGR intervals test",
+    "Consolidated/standalone mismatch test",
+    "Financial-year alignment test",
+    "Restatement and reclassification flag test",
+    "Market-data freshness test",
+    "Actual-versus-forecast separation test",
+    "Sector-specific metric selection test",
+    "Source provenance presence test",
+    "No fabricated values or unsupported causal claims test"
+  ]
+}

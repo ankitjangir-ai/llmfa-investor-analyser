@@ -1,0 +1,338 @@
+{
+  "version": 1,
+  "total_questions": 22,
+  "answer_source_labels": [
+    "reported_historical",
+    "market_data",
+    "company_guidance",
+    "analyst_estimate",
+    "llm_scenario"
+  ],
+  "categories": [
+    {
+      "category_id": "revenue_profit_growth",
+      "category": "Revenue & Profit Growth",
+      "questions": [
+        {
+          "id": "Q1",
+          "question": "Has the company demonstrated consistent revenue growth over the last five financial years, and what is its revenue CAGR?",
+          "required_variables": [
+            "revenue by year",
+            "YoY growth",
+            "revenue CAGR"
+          ],
+          "data_source": "P&L",
+          "change_from_original": "unchanged"
+        },
+        {
+          "id": "Q2",
+          "question": "Is the company's profit growing at the same pace as its revenue, or is profitability improving or deteriorating?",
+          "required_variables": [
+            "PAT CAGR",
+            "EBITDA CAGR",
+            "EPS CAGR",
+            "revenue CAGR"
+          ],
+          "data_source": "P&L",
+          "change_from_original": "unchanged"
+        },
+        {
+          "id": "Q3",
+          "question": "Are the company's earnings stable and sustainable, or do historical trends indicate significant volatility or cyclicality?",
+          "required_variables": [
+            "std dev / coefficient of variation of growth and margins",
+            "count of loss or dip years"
+          ],
+          "data_source": "P&L",
+          "change_from_original": "unchanged"
+        },
+        {
+          "id": "Q4",
+          "question": "How is revenue split by segment, geography or customer, and is it concentrated in a risky way?",
+          "required_variables": [
+            "segment revenue and profit share",
+            "export share",
+            "top-customer share where disclosed"
+          ],
+          "data_source": "Segment note, annual report",
+          "change_from_original": "new"
+        }
+      ]
+    },
+    {
+      "category_id": "profitability_capital_efficiency",
+      "category": "Profitability & Capital Efficiency",
+      "questions": [
+        {
+          "id": "Q5",
+          "question": "How have the company's operating margin, EBITDA margin and net profit margin changed over the last five years?",
+          "required_variables": [
+            "operating margin",
+            "EBITDA margin",
+            "net margin by year"
+          ],
+          "data_source": "P&L",
+          "change_from_original": "unchanged"
+        },
+        {
+          "id": "Q6",
+          "question": "Is the company becoming more efficient at generating returns from its invested capital, as reflected by ROE and ROCE, and what drives the change (margin, asset turnover, leverage)?",
+          "required_variables": [
+            "PAT",
+            "equity",
+            "EBIT",
+            "capital employed",
+            "asset turnover",
+            "equity multiplier (DuPont)"
+          ],
+          "data_source": "P&L, balance sheet",
+          "change_from_original": "modified"
+        },
+        {
+          "id": "Q7",
+          "question": "Are improvements in profitability driven by better operating performance, or by costs, other income or exceptional items, and what is the degree of operating leverage?",
+          "required_variables": [
+            "other income share of PBT",
+            "exceptional items",
+            "fixed vs variable cost proxies",
+            "DOL = %chg EBIT / %chg revenue"
+          ],
+          "data_source": "P&L, notes",
+          "change_from_original": "modified"
+        }
+      ]
+    },
+    {
+      "category_id": "cash_flow_earnings_quality",
+      "category": "Cash Flow & Earnings Quality",
+      "questions": [
+        {
+          "id": "Q8",
+          "question": "Is the company consistently converting reported profit into operating cash flow, and are there warning signs in its cash flow trends?",
+          "required_variables": [
+            "CFO/PAT",
+            "CFO/EBITDA",
+            "accruals ratio",
+            "receivables growth vs revenue growth"
+          ],
+          "data_source": "Cash flow statement, balance sheet",
+          "change_from_original": "merged (old Q7 + Q9)"
+        },
+        {
+          "id": "Q9",
+          "question": "Is the company generating sufficient free cash flow after accounting for its capital expenditure?",
+          "required_variables": [
+            "FCF = CFO - capex",
+            "FCF margin",
+            "FCF/PAT",
+            "capex/depreciation"
+          ],
+          "data_source": "Cash flow statement",
+          "change_from_original": "unchanged"
+        }
+      ]
+    },
+    {
+      "category_id": "debt_financial_safety",
+      "category": "Debt & Financial Safety",
+      "questions": [
+        {
+          "id": "Q10",
+          "question": "How has the company's debt position changed over the last five years, and is the current level sustainable relative to its earnings, cash generation and liquidity?",
+          "required_variables": [
+            "D/E",
+            "net debt/EBITDA",
+            "debt/total assets",
+            "cash and equivalents",
+            "short vs long-term borrowings"
+          ],
+          "data_source": "Balance sheet, borrowings note",
+          "change_from_original": "merged (old Q10 + Q12)"
+        },
+        {
+          "id": "Q11",
+          "question": "Can the company comfortably meet its interest obligations using its operating earnings?",
+          "required_variables": [
+            "EBIT/interest",
+            "EBITDA/interest",
+            "finance cost trend"
+          ],
+          "data_source": "P&L",
+          "change_from_original": "unchanged"
+        }
+      ]
+    },
+    {
+      "category_id": "working_capital_liquidity",
+      "category": "Working Capital & Liquidity",
+      "questions": [
+        {
+          "id": "Q12",
+          "question": "Can the company comfortably meet its short-term financial obligations using its current assets?",
+          "required_variables": [
+            "current ratio",
+            "quick ratio",
+            "cash ratio"
+          ],
+          "data_source": "Balance sheet",
+          "change_from_original": "unchanged"
+        },
+        {
+          "id": "Q13",
+          "question": "Is the company's working capital management improving, particularly in terms of inventory and receivables efficiency?",
+          "required_variables": [
+            "DSO",
+            "DIO",
+            "DPO",
+            "cash conversion cycle",
+            "NWC/revenue"
+          ],
+          "data_source": "Balance sheet, P&L",
+          "change_from_original": "unchanged"
+        }
+      ]
+    },
+    {
+      "category_id": "latest_fy_vs_previous_fy",
+      "category": "Latest FY vs Previous FY Comparison",
+      "questions": [
+        {
+          "id": "Q14",
+          "question": "What are the most significant changes between the latest and previous financial year across revenue, profitability, cash flow, assets and debt, which indicators improved or deteriorated the most, and what does this indicate?",
+          "required_variables": [
+            "YoY delta table of ~15 core metrics ranked by magnitude"
+          ],
+          "data_source": "All three statements",
+          "change_from_original": "merged (old Q15 + Q16)"
+        }
+      ]
+    },
+    {
+      "category_id": "valuation_future_outlook",
+      "category": "Valuation & Future Outlook",
+      "questions": [
+        {
+          "id": "Q15",
+          "question": "How is the company currently valued based on P/E, P/B and EV/EBITDA, and what do these multiples indicate?",
+          "required_variables": [
+            "price",
+            "market cap",
+            "EPS",
+            "book value",
+            "EV",
+            "EBITDA"
+          ],
+          "data_source": "Market data",
+          "change_from_original": "unchanged"
+        },
+        {
+          "id": "Q16",
+          "question": "How does the company's valuation compare with its own historical valuation and relevant industry peers?",
+          "required_variables": [
+            "5-year median multiples",
+            "peer set multiples"
+          ],
+          "data_source": "Market data, peer mapping",
+          "change_from_original": "unchanged"
+        },
+        {
+          "id": "Q17",
+          "question": "What growth and margin expectations are already priced into the current share price, and what assumptions must hold for that price to be justified?",
+          "required_variables": [
+            "current price",
+            "FCF",
+            "cost of equity / WACC assumption",
+            "implied growth (reverse DCF)",
+            "historical CAGR"
+          ],
+          "data_source": "Market data, cash flow statement",
+          "change_from_original": "new"
+        },
+        {
+          "id": "Q18",
+          "question": "Based on historical performance and reasonable assumptions, what could revenue, profitability and cash flow look like over the next one to three years under base, bull and bear cases?",
+          "required_variables": [
+            "historical CAGR",
+            "margin range",
+            "capex intensity"
+          ],
+          "data_source": "Derived (LLM scenario, label clearly)",
+          "change_from_original": "unchanged"
+        },
+        {
+          "id": "Q19",
+          "question": "What are the major financial risks and downside scenarios, including the effect of revenue falling 10%, costs rising or borrowing costs rising?",
+          "required_variables": [
+            "DOL from Q7",
+            "interest coverage stress",
+            "covenant headroom"
+          ],
+          "data_source": "Outputs of Q7 and Q11",
+          "change_from_original": "modified"
+        }
+      ]
+    },
+    {
+      "category_id": "shareholder_returns_capital_allocation",
+      "category": "Shareholder Returns & Capital Allocation",
+      "questions": [
+        {
+          "id": "Q20",
+          "question": "How effectively has the company allocated capital between expansion, capex, debt reduction, acquisitions and shareholder returns?",
+          "required_variables": [
+            "CFI and CFF breakdown",
+            "payout ratio"
+          ],
+          "data_source": "Cash flow statement",
+          "change_from_original": "unchanged"
+        },
+        {
+          "id": "Q21",
+          "question": "Have shareholders benefited through EPS improvement, dividends, buybacks and other capital-return measures, net of dilution?",
+          "required_variables": [
+            "EPS CAGR",
+            "DPS",
+            "payout ratio",
+            "dividend consistency",
+            "shares outstanding trend"
+          ],
+          "data_source": "P&L, market data",
+          "change_from_original": "modified"
+        },
+        {
+          "id": "Q22",
+          "question": "Are management and shareholder interests aligned, and are there governance red flags?",
+          "required_variables": [
+            "promoter holding trend",
+            "pledged %",
+            "related-party transactions % of revenue",
+            "auditor qualifications / emphasis of matter",
+            "contingent liabilities vs net worth",
+            "KMP remuneration vs profit"
+          ],
+          "data_source": "Annual report notes, shareholding pattern",
+          "change_from_original": "new"
+        }
+      ]
+    }
+  ],
+  "post_processing": {
+    "scorecard": "After Q1-Q22, produce strengths, weaknesses and red flags, each linked to its question id. Do not predict stock price."
+  },
+  "sector_variants": {
+    "applies_to": [
+      "banks",
+      "NBFCs"
+    ],
+    "replace": {
+      "Q5, Q7": "NIM, cost-to-income, credit cost",
+      "Q10, Q11, Q12": "GNPA/NNPA, CAR, CASA, LCR, provision coverage",
+      "Q15": "P/B and P/E only (no EV/EBITDA)"
+    },
+    "drop": [
+      "Q8",
+      "Q9",
+      "Q13"
+    ]
+  }
+}

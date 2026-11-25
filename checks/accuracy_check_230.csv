@@ -1,0 +1,231 @@
+id,company,fy,variable,unit,printed,divisor,printed_value_crore,model_value,gap,gap_pct,method,rule_branch,value_status,validation_status,source_page,class
+R008,APOLLO_MICROSYSTEMS,2022,other_bank_balances,INR crore,1588.55,100,15.8855,15.8855,0.0,0.0,P_row,sum of current-asset 'bank balances other than cash' rows,reported,unverified,146.0,exact
+R014,APOLLO_MICROSYSTEMS,2022,cost_of_materials,INR crore,19988.75,100,199.8875,199.8875,0.0,0.0,P,R1:P=L,reported,validated,147.0,exact
+R017,APOLLO_MICROSYSTEMS,2022,eps_basic,INR,7.04,1,7.04,7.04,0.0,0.0,P,R3:document only | web definition differs (web value not used),reported,unverified,147.0,exact
+R029,APOLLO_MICROSYSTEMS,2022,operating_cash_flow,INR crore,4399.9,100,43.999,43.999,0.0,0.0,P,R1:P=L,reported,validated,148.0,exact
+R030,APOLLO_MICROSYSTEMS,2022,repayment_borrowings,INR crore,110.21,100,1.1021,1.1021,0.0,0.0,L,R3:document only,reported,unverified,148.0,exact
+R040,APOLLO_MICROSYSTEMS,2023,cash_and_cash_equivalents,INR crore,24.85,100,0.2485,0.2485,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,178.0,exact
+R045,APOLLO_MICROSYSTEMS,2023,lease_liabilities,INR crore,113.44,100,1.1344,1.1344,0.0,0.0,P,"R2:P sums several rows, L single row -> P",reported,warning,178.0,exact
+R046,APOLLO_MICROSYSTEMS,2023,other_bank_balances,INR crore,1805.21,100,18.0521,18.0521,0.0,0.0,P_row,sum of current-asset 'bank balances other than cash' rows,reported,unverified,178.0,exact
+R053,APOLLO_MICROSYSTEMS,2023,depreciation_and_amortisation,INR crore,1036.64,100,10.3664,10.3664,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,179.0,exact
+R056,APOLLO_MICROSYSTEMS,2023,exceptional_items,INR crore,322.22,100,3.2222,3.2222,4.440892098500626e-16,1.378217397585695e-14,P,R3:document only,reported,unverified,179.0,exact
+R057,APOLLO_MICROSYSTEMS,2023,finance_costs,INR crore,2236.88,100,22.3688,22.3688,0.0,0.0,P,R1:P=L | web definition differs (web value not used) | web sources disagree,reported,warning,179.0,exact
+R068,APOLLO_MICROSYSTEMS,2023,operating_cash_flow,INR crore,-1628.88,100,-16.2888,-16.2888,3.552713678800501e-15,2.181077598595661e-14,P,R1:P=L | web sources disagree,reported,warning,180.0,exact
+R069,APOLLO_MICROSYSTEMS,2023,proceeds_borrowings,INR crore,2787.34,100,27.8734,27.8734,3.552713678800501e-15,1.274589278236778e-14,L,R3:document only,reported,unverified,180.0,exact
+R075,APOLLO_MICROSYSTEMS,2024,borrowings_current,INR crore,19671.88,100,196.7188,196.7188,0.0,0.0,L,R3:document only,reported,unverified,182.0,exact
+R076,APOLLO_MICROSYSTEMS,2024,borrowings_noncurrent,INR crore,955.93,100,9.5593,9.5593,0.0,0.0,L,R3:document only,reported,unverified,182.0,exact
+R077,APOLLO_MICROSYSTEMS,2024,cash_and_cash_equivalents,INR crore,19.66,100,0.1966,0.1966,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,182.0,exact
+R082,APOLLO_MICROSYSTEMS,2024,lease_liabilities,INR crore,176.63,100,1.7663,1.7663,0.0,0.0,L,R3:document only,reported,unverified,182.0,exact
+R083,APOLLO_MICROSYSTEMS,2024,other_bank_balances,INR crore,2054.6,100,20.546,20.546,0.0,0.0,P_row,sum of current-asset 'bank balances other than cash' rows,reported,unverified,182.0,exact
+R085,APOLLO_MICROSYSTEMS,2024,trade_receivables,INR crore,23527.17,100,235.2717,235.2717,0.0,0.0,P,R1:P=L,reported,validated,182.0,exact
+R088,APOLLO_MICROSYSTEMS,2024,depreciation_and_amortisation,INR crore,1129.56,100,11.2956,11.2956,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,183.0,exact
+R090,APOLLO_MICROSYSTEMS,2024,eps_basic,INR,1.24,1,1.24,1.24,0.0,0.0,P,R1:P=L | web definition differs (web value not used) | web sources disagree,reported,warning,183.0,exact
+R092,APOLLO_MICROSYSTEMS,2024,finance_costs,INR crore,3030.17,100,30.3017,30.3017,0.0,0.0,P,R1:P=L | web definition differs (web value not used) | web sources disagree,reported,warning,183.0,exact
+R097,APOLLO_MICROSYSTEMS,2024,tax_expense,INR crore,1298.74,100,12.9874,12.9874,0.0,0.0,P,R3:document only,reported,unverified,183.0,exact
+R103,APOLLO_MICROSYSTEMS,2024,operating_cash_flow,INR crore,-7849.11,100,-78.4911,-78.4911,0.0,0.0,P,R1:P=L,reported,validated,184.0,exact
+R104,APOLLO_MICROSYSTEMS,2024,proceeds_borrowings,INR crore,6376.25,100,63.7625,63.7625,0.0,0.0,L,R3:document only,reported,unverified,184.0,exact
+R110,APOLLO_MICROSYSTEMS,2025,borrowings_current,INR crore,26099.82,100,260.9982,260.9982,0.0,0.0,L,R3:document only,reported,unverified,221.0,exact
+R111,APOLLO_MICROSYSTEMS,2025,borrowings_noncurrent,INR crore,6976.48,100,69.7648,69.7648,0.0,0.0,L,R3:document only,reported,unverified,221.0,exact
+R112,APOLLO_MICROSYSTEMS,2025,cash_and_cash_equivalents,INR crore,4026.96,100,40.2696,40.2696,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,221.0,exact
+R114,APOLLO_MICROSYSTEMS,2025,current_liabilities,INR crore,57708.16,100,577.0816,577.0816000000001,1.13686837721616e-13,1.970030541982555e-14,P,R1:P=L,reported,validated,221.0,exact
+R117,APOLLO_MICROSYSTEMS,2025,lease_liabilities,INR crore,458.44,100,4.5844,4.5844,8.881784197001252e-16,1.937392940625e-14,L,R3:document only,reported,unverified,221.0,exact
+R118,APOLLO_MICROSYSTEMS,2025,other_bank_balances,INR crore,2220.89,100,22.2089,22.2089,0.0,0.0,P_row,sum of current-asset 'bank balances other than cash' rows,reported,unverified,221.0,exact
+R122,APOLLO_MICROSYSTEMS,2025,trade_payables,INR crore,27994.5,100,279.945,279.945,0.0,0.0,P,R1:P=L,reported,validated,221.0,exact
+R123,APOLLO_MICROSYSTEMS,2025,trade_receivables,INR crore,23832.95,100,238.3295,238.3295,0.0,0.0,P,R1:P=L,reported,validated,221.0,exact
+R124,APOLLO_MICROSYSTEMS,2025,change_inventories,INR crore,-3870.53,100,-38.7053,-38.7053,0.0,0.0,P,R1:P=L,reported,validated,222.0,exact
+R126,APOLLO_MICROSYSTEMS,2025,depreciation_and_amortisation,INR crore,1533.29,100,15.3329,15.3329,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,222.0,exact
+R130,APOLLO_MICROSYSTEMS,2025,finance_costs,INR crore,3421.58,100,34.2158,34.2158,0.0,0.0,P,R1:P=L | web definition differs (web value not used) | web sources disagree,reported,warning,222.0,exact
+R135,APOLLO_MICROSYSTEMS,2025,tax_expense,INR crore,2618.88,100,26.1888,26.1888,0.0,0.0,P,R3:document only,reported,unverified,222.0,exact
+R141,APOLLO_MICROSYSTEMS,2025,operating_cash_flow,INR crore,1023.56,100,10.2356,10.2356,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,223.0,exact
+R142,APOLLO_MICROSYSTEMS,2025,proceeds_borrowings,INR crore,10286.15,100,102.8615,102.8615,0.0,0.0,P,"R2:P sums several rows, L single row -> P",reported,warning,223.0,exact
+R148,APOLLO_MICROSYSTEMS,2026,borrowings_current,INR crore,41315.24,100,413.1524,413.1524,0.0,0.0,L,R3:document only,reported,unverified,250.0,exact
+R149,APOLLO_MICROSYSTEMS,2026,borrowings_noncurrent,INR crore,11925.97,100,119.2597,119.2597,0.0,0.0,L,R3:document only,reported,unverified,250.0,exact
+R150,APOLLO_MICROSYSTEMS,2026,cash_and_cash_equivalents,INR crore,8950.32,100,89.5032,89.50319999999999,1.4210854715202e-14,1.587748227460247e-14,P,R1:P=L | web sources disagree,reported,warning,250.0,exact
+R155,APOLLO_MICROSYSTEMS,2026,lease_liabilities,INR crore,1084.68,100,10.8468,10.8468,0.0,0.0,L,R3:document only,reported,unverified,250.0,exact
+R156,APOLLO_MICROSYSTEMS,2026,other_bank_balances,INR crore,6661.11,100,66.6111,66.6111,0.0,0.0,P_row,sum of current-asset 'bank balances other than cash' rows,reported,unverified,250.0,exact
+R159,APOLLO_MICROSYSTEMS,2026,trade_payables,INR crore,38201.43,100,382.0143,382.0143,0.0,0.0,P,"R2:P sums several rows, L single row -> P",reported,warning,250.0,exact
+R163,APOLLO_MICROSYSTEMS,2026,depreciation_and_amortisation,INR crore,2231.51,100,22.3151,22.3151,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,251.0,exact
+R164,APOLLO_MICROSYSTEMS,2026,employee_benefit_expenses,INR crore,3718.01,100,37.1801,37.1801,0.0,0.0,P,R1:P=L,reported,validated,251.0,exact
+R165,APOLLO_MICROSYSTEMS,2026,eps_basic,INR,3.35,1,3.35,3.35,0.0,0.0,P,R1:P=L | web definition differs (web value not used) | web sources disagree,reported,warning,251.0,exact
+R167,APOLLO_MICROSYSTEMS,2026,finance_costs,INR crore,4732.37,100,47.3237,47.3237,0.0,0.0,P,R1:P=L | web definition differs (web value not used) | web sources disagree,reported,warning,251.0,exact
+R171,APOLLO_MICROSYSTEMS,2026,purchases_stock,INR crore,61.7,100,0.617,0.617,0.0,0.0,P,R1:P=L,reported,validated,251.0,exact
+R180,APOLLO_MICROSYSTEMS,2026,proceeds_borrowings,INR crore,15278.87,100,152.7887,152.7887,0.0,0.0,P,"R2:P sums several rows, L single row -> P",reported,warning,252.0,exact
+R185,APOLLO_MICROSYSTEMS,2022,pat_owners,INR crore,1461.83,100,14.6183,15.0,0.3817000000000004,2.544666666666669,O,O-only variable,estimated,unverified,,within_tolerance
+R186,APOLLO_MICROSYSTEMS,2023,pat_owners,INR crore,1875.02,100,18.7502,18.7505,0.0002999999999993008,0.001599957334467352,O,O-only variable,estimated,unverified,,within_tolerance
+R187,APOLLO_MICROSYSTEMS,2024,pat_owners,INR crore,3111.94,100,31.1194,31.1194,0.0,0.0,O,O-only variable,estimated,unverified,,exact
+R188,APOLLO_MICROSYSTEMS,2025,pat_owners,INR crore,5639.63,100,56.3963,56.3965,0.0002000000000066393,0.0003546319363908032,O,O-only variable,estimated,unverified,,within_tolerance
+R189,APOLLO_MICROSYSTEMS,2026,pat_owners,INR crore,11292.04,100,112.9204,112.9204,0.0,0.0,O,O-only variable,estimated,unverified,,exact
+R198,BEL,2022,other_bank_balances,INR crore,626288.0,100,6262.88,6262.88,0.0,0.0,P_row,sum of current-asset 'bank balances other than cash' rows,reported,unverified,116.0,exact
+R199,BEL,2022,total_assets,INR crore,3391058.0,100,33910.58,33910.58,0.0,0.0,P,R1:P=L,reported,validated,116.0,exact
+R200,BEL,2022,total_equity,INR crore,1230227.0,100,12302.27,12302.27,0.0,0.0,P,R1:P=L,reported,validated,116.0,exact
+R203,BEL,2022,change_inventories,INR crore,-28028.0,100,-280.28,-280.28,5.684341886080801e-14,2.028094008163551e-14,L,R3:document only,reported,unverified,117.0,exact
+R204,BEL,2022,cost_of_materials,INR crore,809336.0,100,8093.36,8093.360000000001,9.094947017729282e-13,1.123754166097799e-14,L,R3:document only,reported,unverified,117.0,exact
+R206,BEL,2022,employee_benefit_expenses,INR crore,212801.0,100,2128.01,2128.01,0.0,0.0,L,R3:document only,reported,unverified,117.0,exact
+R208,BEL,2022,finance_costs,INR crore,505.0,100,5.05,5.05,0.0,0.0,L,R3:document only | web definition differs (web value not used),reported,unverified,117.0,exact
+R213,BEL,2022,tax_expense,INR crore,81178.0,100,811.78,811.78,0.0,0.0,P,R3:document only,reported,unverified,117.0,exact
+R214,BEL,2022,total_expenses,INR crore,1243348.0,100,12433.48,12433.48,0.0,0.0,L,R3:document only,reported,unverified,117.0,exact
+R215,BEL,2022,capex,INR crore,55456.0,100,554.56,554.5600000000001,1.13686837721616e-13,2.050036744835834e-14,L,R2:P = 2 x L (double count) -> L,reported,warning,119.0,exact
+R217,BEL,2022,financing_cash_flow,INR crore,-107760.0,100,-1077.6,-1077.6,0.0,0.0,P,R1:P=L,reported,validated,119.0,exact
+R223,BEL,2022,eps_basic,INR,9.85,1,9.85,3.28,6.57,66.7005076142132,O,R4:O only,estimated,unverified,,mismatch
+R229,BEL,2023,cash_and_cash_equivalents,INR crore,394569.0,100,3945.69,3945.69,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,123.0,exact
+R235,BEL,2023,other_bank_balances,INR crore,416589.0,100,4165.89,4165.89,0.0,0.0,P_row,sum of current-asset 'bank balances other than cash' rows,reported,unverified,123.0,exact
+R238,BEL,2023,trade_payables,INR crore,333038.0,100,3330.38,3330.38,0.0,0.0,P,"R2:P sums several rows, L single row -> P",reported,warning,123.0,exact
+R240,BEL,2023,change_inventories,INR crore,-39328.0,100,-393.28,-393.28,0.0,0.0,L,R3:document only,reported,unverified,124.0,exact
+R241,BEL,2023,cost_of_materials,INR crore,935601.0,100,9356.01,9356.01,0.0,0.0,L,R3:document only,reported,unverified,124.0,exact
+R243,BEL,2023,employee_benefit_expenses,INR crore,231734.0,100,2317.34,2317.34,0.0,0.0,L,R3:document only,reported,unverified,124.0,exact
+R245,BEL,2023,finance_costs,INR crore,1495.0,100,14.95,14.95,0.0,0.0,L,R3:document only | web definition differs (web value not used),reported,unverified,124.0,exact
+R249,BEL,2023,revenue_from_operations,INR crore,1773444.0,100,17734.44,17734.44,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,124.0,exact
+R250,BEL,2023,tax_expense,INR crore,98256.0,100,982.56,982.56,0.0,0.0,P,R1:P=L,reported,validated,124.0,exact
+R251,BEL,2023,total_expenses,INR crore,1409233.0,100,14092.33,14092.33,0.0,0.0,L,R3:document only,reported,unverified,124.0,exact
+R254,BEL,2023,financing_cash_flow,INR crore,-131287.0,100,-1312.87,-1312.87,0.0,0.0,P,restored: document value (web figure is the restated version; cash-flow lines must come from one report),reported,warning,126.0,exact
+R257,BEL,2023,repayment_borrowings,INR crore,0.0,100,0.0,4.33,4.33,,L,R3:document only,reported,unverified,126.0,mismatch
+R261,BEL,2023,eps_basic,INR,4.09,1,4.09,4.09,0.0,0.0,O,R4:O only,estimated,unverified,,exact
+R266,BEL,2024,cash_and_cash_equivalents,INR crore,120632.0,100,1206.32,1206.32,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,138.0,exact
+R272,BEL,2024,other_bank_balances,INR crore,985027.0,100,9850.27,9850.27,0.0,0.0,P_row,sum of current-asset 'bank balances other than cash' rows,reported,unverified,138.0,exact
+R273,BEL,2024,total_assets,INR crore,3952668.0,100,39526.68,39526.68,0.0,0.0,P,R1:P=L,reported,validated,138.0,exact
+R275,BEL,2024,trade_payables,INR crore,370631.0,100,3706.31,3706.31,0.0,0.0,P,"R2:P sums several rows, L single row -> P",reported,warning,138.0,exact
+R277,BEL,2024,change_inventories,INR crore,-56172.0,100,-561.72,-561.72,0.0,0.0,L,R3:document only,reported,unverified,139.0,exact
+R278,BEL,2024,cost_of_materials,INR crore,1050918.0,100,10509.18,10509.18,0.0,0.0,L,R3:document only,reported,unverified,139.0,exact
+R280,BEL,2024,employee_benefit_expenses,INR crore,248949.0,100,2489.49,2489.49,0.0,0.0,L,R3:document only,reported,unverified,139.0,exact
+R282,BEL,2024,finance_costs,INR crore,714.0,100,7.14,7.140000000000001,8.881784197001252e-16,1.243947366526786e-14,L,R3:document only | web definition differs (web value not used),reported,unverified,139.0,exact
+R283,BEL,2024,other_income,INR crore,67014.0,100,670.14,670.14,0.0,0.0,P,R1:P=L,reported,validated,139.0,exact
+R286,BEL,2024,revenue_from_operations,INR crore,2026824.0,100,20268.24,20268.24,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,139.0,exact
+R287,BEL,2024,tax_expense,INR crore,132310.0,100,1323.1,1323.1,0.0,0.0,P,R3:document only,reported,unverified,139.0,exact
+R288,BEL,2024,total_expenses,INR crore,1567217.0,100,15672.17,15672.17,0.0,0.0,L,R3:document only,reported,unverified,139.0,exact
+R294,BEL,2024,repayment_borrowings,INR crore,0.0,100,0.0,5.78,5.78,,L,R3:document only,reported,unverified,141.0,mismatch
+R298,BEL,2024,eps_basic,INR,5.45,1,5.45,5.45,0.0,0.0,O,R4:O only,estimated,unverified,,exact
+R303,BEL,2025,cash_and_cash_equivalents,INR crore,71345.0,100,713.45,713.45,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,147.0,exact
+R309,BEL,2025,other_bank_balances,INR crore,883165.0,100,8831.65,8831.65,0.0,0.0,P_row,sum of current-asset 'bank balances other than cash' rows,reported,unverified,147.0,exact
+R311,BEL,2025,total_equity,INR crore,1999283.0,100,19992.83,19992.83,0.0,0.0,P,R1:P=L,reported,validated,147.0,exact
+R312,BEL,2025,trade_payables,INR crore,333877.0,100,3338.77,3338.77,0.0,0.0,P,"R2:P sums several rows, L single row -> P",reported,warning,147.0,exact
+R314,BEL,2025,change_inventories,INR crore,-82136.0,100,-821.36,-821.36,0.0,0.0,L,R3:document only,reported,unverified,148.0,exact
+R315,BEL,2025,cost_of_materials,INR crore,1257818.0,100,12578.18,12578.18,0.0,0.0,L,R3:document only,reported,unverified,148.0,exact
+R317,BEL,2025,employee_benefit_expenses,INR crore,276063.0,100,2760.63,2760.63,0.0,0.0,L,R3:document only,reported,unverified,148.0,exact
+R319,BEL,2025,finance_costs,INR crore,968.0,100,9.68,9.68,0.0,0.0,L,R3:document only | web definition differs (web value not used),reported,unverified,148.0,exact
+R321,BEL,2025,pat,INR crore,532268.0,100,5322.68,5322.68,0.0,0.0,P,R1:P=L,reported,validated,148.0,exact
+R323,BEL,2025,revenue_from_operations,INR crore,2376875.0,100,23768.75,23768.75,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,148.0,exact
+R324,BEL,2025,tax_expense,INR crore,181185.0,100,1811.85,1811.85,0.0,0.0,P,R3:document only,reported,unverified,148.0,exact
+R325,BEL,2025,total_expenses,INR crore,1741211.0,100,17412.11,17412.11,0.0,0.0,L,R3:document only,reported,unverified,148.0,exact
+R331,BEL,2025,repayment_borrowings,INR crore,0.0,100,0.0,5.97,5.97,,L,R3:document only,reported,unverified,150.0,mismatch
+R335,BEL,2025,eps_basic,INR,7.28,1,7.28,7.28,0.0,0.0,O,R4:O only,estimated,unverified,,exact
+R340,BEL,2026,cash_and_cash_equivalents,INR crore,188796.0,100,1887.96,1887.96,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,145.0,exact
+R346,BEL,2026,other_bank_balances,INR crore,668407.0,100,6684.07,6684.07,0.0,0.0,P_row,sum of current-asset 'bank balances other than cash' rows,reported,unverified,145.0,exact
+R347,BEL,2026,total_assets,INR crore,4453752.0,100,44537.52,44537.52,0.0,0.0,P,R1:P=L,reported,validated,145.0,exact
+R349,BEL,2026,trade_payables,INR crore,358340.0,100,3583.4,3583.4,0.0,0.0,P,"R2:P sums several rows, L single row -> P",reported,warning,145.0,exact
+R351,BEL,2026,change_inventories,INR crore,-59688.0,100,-596.88,-596.88,0.0,0.0,L,R3:document only,reported,unverified,146.0,exact
+R352,BEL,2026,cost_of_materials,INR crore,1388161.0,100,13881.61,13881.61,0.0,0.0,L,R3:document only,reported,unverified,146.0,exact
+R354,BEL,2026,employee_benefit_expenses,INR crore,311555.0,100,3115.55,3115.55,0.0,0.0,L,R3:document only,reported,unverified,146.0,exact
+R356,BEL,2026,finance_costs,INR crore,673.0,100,6.73,6.73,0.0,0.0,L,R3:document only | web definition differs (web value not used),reported,unverified,146.0,exact
+R360,BEL,2026,revenue_from_operations,INR crore,2761011.0,100,27610.11,27610.11,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,146.0,exact
+R361,BEL,2026,tax_expense,INR crore,202949.0,100,2029.49,2029.49,0.0,0.0,P,R3:document only,reported,unverified,146.0,exact
+R362,BEL,2026,total_expenses,INR crore,2012318.0,100,20123.18,20123.18,0.0,0.0,L,R3:document only,reported,unverified,146.0,exact
+R367,BEL,2026,operating_cash_flow,INR crore,154137.0,100,1541.37,1541.37,0.0,0.0,P,R1:P=L,reported,validated,148.0,exact
+R368,BEL,2026,repayment_borrowings,INR crore,0.0,100,0.0,7.24,7.24,,L,R3:document only,reported,unverified,148.0,mismatch
+R372,BEL,2026,eps_basic,INR,8.29,1,8.29,8.29,0.0,0.0,O,R4:O only,estimated,unverified,,exact
+R375,BEL,2022,pat_owners,INR crore,239887.0,100,2398.87,2400.0,1.130000000000109,0.04708333333333788,O,O-only variable,estimated,unverified,,within_tolerance
+R376,BEL,2023,pat_owners,INR crore,298442.0,100,2984.42,2984.42,0.0,0.0,O,O-only variable,estimated,unverified,,exact
+R377,BEL,2024,pat_owners,INR crore,398452.0,100,3984.52,3984.52,0.0,0.0,O,O-only variable,estimated,unverified,,exact
+R378,BEL,2025,pat_owners,INR crore,532144.0,100,5321.44,5321.44,0.0,0.0,O,O-only variable,estimated,unverified,,exact
+R379,BEL,2026,pat_owners,INR crore,606200.0,100,6062.0,6062.0,0.0,0.0,O,O-only variable,estimated,unverified,,exact
+R380,DATA_PATTERNS,2022,borrowings_current,INR crore,6.04,1,6.04,6.04,0.0,0.0,P,R1:P=L,reported,validated,58.0,exact
+R390,DATA_PATTERNS,2022,trade_payables,INR crore,38.15,1,38.15,38.15,0.0,0.0,P,"R2:P sums several rows, L single row -> P",reported,warning,58.0,exact
+R392,DATA_PATTERNS,2022,change_inventories,INR crore,-5.52,1,-5.52,-5.52,0.0,0.0,P_wrapped,wrapped label: numbers on the next unlabeled row,reported,unverified,59.0,exact
+R394,DATA_PATTERNS,2022,depreciation_and_amortisation,INR crore,6.63,1,6.63,7.0,0.3700000000000001,5.285714285714287,O,R3:O differs 1-10% -> O,estimated,warning,59.0,within_tolerance
+R408,DATA_PATTERNS,2022,repayment_borrowings,INR crore,9.04,1,9.04,9.04,0.0,0.0,L,R3:document only,reported,unverified,60.0,exact
+R416,DATA_PATTERNS,2023,borrowings_current,INR crore,0.46,1,0.46,0.46,0.0,0.0,P,R1:P=L,reported,validated,112.0,exact
+R417,DATA_PATTERNS,2023,borrowings_noncurrent,INR crore,0.26,1,0.26,0.26,0.0,0.0,P,R3:document only,reported,unverified,112.0,exact
+R418,DATA_PATTERNS,2023,cash_and_cash_equivalents,INR crore,214.78,1,214.78,214.78,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,112.0,exact
+R423,DATA_PATTERNS,2023,lease_liabilities,INR crore,1.77,1,1.77,1.77,0.0,0.0,P,"R2:P sums several rows, L single row -> P",reported,warning,112.0,exact
+R424,DATA_PATTERNS,2023,other_bank_balances,INR crore,329.75,1,329.75,329.75,0.0,0.0,P_row,sum of current-asset 'bank balances other than cash' rows,reported,unverified,112.0,exact
+R429,DATA_PATTERNS,2023,cost_of_materials,INR crore,194.14,1,194.14,194.14,0.0,0.0,P,R1:P=L,reported,validated,113.0,exact
+R430,DATA_PATTERNS,2023,depreciation_and_amortisation,INR crore,8.45,1,8.45,8.0,0.4499999999999993,5.32544378698224,O,R3:O differs 1-10% -> O,estimated,warning,113.0,within_tolerance
+R432,DATA_PATTERNS,2023,eps_basic,INR,23.8,1,23.8,23.8,0.0,0.0,P,R3:document only | web definition differs (web value not used),reported,unverified,113.0,exact
+R433,DATA_PATTERNS,2023,finance_costs,INR crore,7.74,1,7.74,7.74,0.0,0.0,P,R1:P=L | web definition differs (web value not used) | web sources disagree,reported,warning,113.0,exact
+R437,DATA_PATTERNS,2023,revenue_from_operations,INR crore,453.45,1,453.45,453.45,0.0,0.0,P,R1:P=L,reported,validated,113.0,exact
+R438,DATA_PATTERNS,2023,total_expenses,INR crore,297.83,1,297.83,297.83,0.0,0.0,P,R1:P=L,reported,validated,113.0,exact
+R443,DATA_PATTERNS,2023,operating_cash_flow,INR crore,-17.24,1,-17.24,-17.24,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,114.0,exact
+R444,DATA_PATTERNS,2023,proceeds_borrowings,INR crore,5.58,1,5.58,5.58,0.0,0.0,L,R3:document only,reported,unverified,114.0,exact
+R445,DATA_PATTERNS,2023,repayment_borrowings,INR crore,0.46,1,0.46,0.46,0.0,0.0,L,R3:document only,reported,unverified,114.0,exact
+R453,DATA_PATTERNS,2024,cash_and_cash_equivalents,INR crore,88.14,1,88.14,88.14,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,106.0,exact
+R459,DATA_PATTERNS,2024,other_bank_balances,INR crore,304.55,1,304.55,304.55,0.0,0.0,P_row,sum of current-asset 'bank balances other than cash' rows,reported,unverified,106.0,exact
+R463,DATA_PATTERNS,2024,trade_payables,INR crore,50.11,1,50.11,50.11,0.0,0.0,P,"R2:P sums several rows, L single row -> P",reported,warning,106.0,exact
+R468,DATA_PATTERNS,2024,employee_benefit_expenses,INR crore,98.99,1,98.99,98.99,0.0,0.0,P,R1:P=L,reported,validated,107.0,exact
+R470,DATA_PATTERNS,2024,finance_costs,INR crore,9.33,1,9.33,9.33,0.0,0.0,P,R1:P=L | web definition differs (web value not used) | web sources disagree,reported,warning,107.0,exact
+R472,DATA_PATTERNS,2024,pat,INR crore,181.69,1,181.69,181.69,0.0,0.0,P,R2:keep P (REVIEW),reported,warning,107.0,exact
+R477,DATA_PATTERNS,2024,capex,INR crore,87.2,1,87.2,87.2,0.0,0.0,P,"R2:P sums several rows, L single row -> P",reported,warning,108.0,exact
+R479,DATA_PATTERNS,2024,financing_cash_flow,INR crore,-42.53,1,-42.53,-42.53,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,108.0,exact
+R491,DATA_PATTERNS,2025,cash_and_cash_equivalents,INR crore,37.66,1,37.66,37.66,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,112.0,exact
+R495,DATA_PATTERNS,2025,inventories,INR crore,318.51,1,318.51,318.51,0.0,0.0,P,R1:P=L,reported,validated,112.0,exact
+R497,DATA_PATTERNS,2025,other_bank_balances,INR crore,88.74,1,88.74,88.74,0.0,0.0,P_row,sum of current-asset 'bank balances other than cash' rows,reported,unverified,112.0,exact
+R500,DATA_PATTERNS,2025,trade_payables,INR crore,83.8,1,83.8,83.80000000000001,1.4210854715202e-14,1.695806051933413e-14,P,"R2:P sums several rows, L single row -> P",reported,warning,112.0,exact
+R503,DATA_PATTERNS,2025,cost_of_materials,INR crore,351.27,1,351.27,351.27,0.0,0.0,P,R1:P=L,reported,validated,113.0,exact
+R507,DATA_PATTERNS,2025,finance_costs,INR crore,12.08,1,12.08,12.08,0.0,0.0,P,R1:P=L | web definition differs (web value not used) | web sources disagree,reported,warning,113.0,exact
+R509,DATA_PATTERNS,2025,pat,INR crore,221.81,1,221.81,221.81,0.0,0.0,P,R1:P=L,reported,validated,113.0,exact
+R528,DATA_PATTERNS,2026,cash_and_cash_equivalents,INR crore,56.85,1,56.85,56.85,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,128.0,exact
+R534,DATA_PATTERNS,2026,other_bank_balances,INR crore,36.98,1,36.98,36.98,0.0,0.0,P_row,sum of current-asset 'bank balances other than cash' rows,reported,unverified,128.0,exact
+R537,DATA_PATTERNS,2026,trade_payables,INR crore,76.8,1,76.8,76.8,0.0,0.0,P,"R2:P sums several rows, L single row -> P",reported,warning,128.0,exact
+R539,DATA_PATTERNS,2026,change_inventories,INR crore,33.84,1,33.84,33.84,0.0,0.0,P,R1:P=L,reported,validated,129.0,exact
+R545,DATA_PATTERNS,2026,finance_costs,INR crore,12.45,1,12.45,12.45,0.0,0.0,P,R1:P=L | web definition differs (web value not used) | web sources disagree,reported,warning,129.0,exact
+R550,DATA_PATTERNS,2026,tax_expense,INR crore,92.17,1,92.17,92.17,0.0,0.0,P,R3:document only,reported,unverified,129.0,exact
+R552,DATA_PATTERNS,2026,capex,INR crore,72.06,1,72.06,72.06,0.0,0.0,P,"R2:P sums several rows, L single row -> P",reported,warning,130.0,exact
+R555,DATA_PATTERNS,2026,investing_cash_flow,INR crore,-3.21,1,-3.21,-3.21,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,130.0,exact
+R563,DATA_PATTERNS,2022,pat_owners,INR crore,93.97,1,93.97,94.0,0.03000000000000114,0.03191489361702248,O,O-only variable,estimated,unverified,,within_tolerance
+R564,DATA_PATTERNS,2023,pat_owners,INR crore,124.0,1,124.0,123.99,0.01000000000000512,0.008064516129036383,O,O-only variable,estimated,unverified,,within_tolerance
+R565,DATA_PATTERNS,2024,pat_owners,INR crore,181.69,1,181.69,181.69,0.0,0.0,O,O-only variable,estimated,unverified,,exact
+R566,DATA_PATTERNS,2025,pat_owners,INR crore,221.81,1,221.81,221.81,0.0,0.0,O,O-only variable,estimated,unverified,,exact
+R567,DATA_PATTERNS,2026,pat_owners,INR crore,271.37,1,271.37,271.37,0.0,0.0,O,O-only variable,estimated,unverified,,exact
+R571,HAL,2022,other_bank_balances,INR crore,1127735.0,100,11277.35,11277.35,0.0,0.0,P_row,sum of current-asset 'bank balances other than cash' rows,reported,unverified,295.0,exact
+R578,HAL,2022,lease_liabilities,INR crore,249.0,100,2.49,2.49,0.0,0.0,L,R3:document only,reported,unverified,296.0,exact
+R583,HAL,2022,depreciation_and_amortisation,INR crore,111053.0,100,1110.53,1110.53,0.0,0.0,P,R1:P=L,reported,validated,297.0,exact
+R595,HAL,2022,investing_cash_flow,INR crore,-1275951.0,100,-12759.51,-12759.51,0.0,0.0,P,R1:P=L,reported,validated,301.0,exact
+R598,HAL,2022,financing_cash_flow,INR crore,-134905.0,100,-1349.05,-1349.05,0.0,0.0,P,R1:P=L,reported,validated,302.0,exact
+R602,HAL,2022,eps_basic,INR,151.92,1,151.92,75.96,75.96,50.0,O,R4:O only,estimated,unverified,,mismatch
+R604,HAL,2023,cash_and_cash_equivalents,INR crore,444077.0,100,4440.77,4440.77,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,287.0,exact
+R606,HAL,2023,inventories,INR crore,1214869.0,100,12148.69,12148.69,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,287.0,exact
+R607,HAL,2023,other_bank_balances,INR crore,1587584.0,100,15875.84,15875.84,0.0,0.0,P_row,sum of current-asset 'bank balances other than cash' rows,reported,unverified,287.0,exact
+R608,HAL,2023,total_assets,INR crore,6720380.0,100,67203.8,67203.8,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,287.0,exact
+R614,HAL,2023,lease_liabilities,INR crore,265.0,100,2.65,2.65,0.0,0.0,L,R3:document only,reported,unverified,288.0,exact
+R617,HAL,2023,change_inventories,INR crore,-69072.0,100,-690.72,-690.72,0.0,0.0,L,R3:document only,reported,unverified,289.0,exact
+R619,HAL,2023,depreciation_and_amortisation,INR crore,178467.0,100,1784.67,1784.67,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,289.0,exact
+R622,HAL,2023,finance_costs,INR crore,5797.0,100,57.97,57.97,0.0,0.0,P,R1:P=L | web definition differs (web value not used) | web sources disagree,reported,warning,289.0,exact
+R627,HAL,2023,revenue_from_operations,INR crore,2692746.0,100,26927.46,26927.46,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,289.0,exact
+R634,HAL,2023,financing_cash_flow,INR crore,-173130.0,100,-1731.3,-1731.3,0.0,0.0,P,R1:P=L,reported,validated,294.0,exact
+R638,HAL,2023,eps_basic,INR,174.28,1,174.28,87.14,87.14,50.0,O,R4:O only,estimated,unverified,,mismatch
+R640,HAL,2024,cash_and_cash_equivalents,INR crore,425469.0,100,4254.69,4254.690000000001,9.094947017729282e-13,2.13762859755453e-14,P,R1:P=L | web sources disagree,reported,warning,290.0,exact
+R642,HAL,2024,inventories,INR crore,1321754.0,100,13217.54,13217.54,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,290.0,exact
+R643,HAL,2024,other_bank_balances,INR crore,2217692.0,100,22176.92,22176.92,0.0,0.0,P_row,sum of current-asset 'bank balances other than cash' rows,reported,unverified,290.0,exact
+R644,HAL,2024,total_assets,INR crore,7809518.0,100,78095.18,78095.18000000001,1.455191522836685e-11,1.863356384909651e-14,P,R1:P=L | web sources disagree,reported,warning,290.0,exact
+R649,HAL,2024,equity_share_capital,INR crore,33439.0,100,334.39,334.39,0.0,0.0,P,R1:P=L,reported,validated,291.0,exact
+R651,HAL,2024,trade_payables,INR crore,341287.0,100,3412.87,3412.87,0.0,0.0,P,R3:O agrees,reported,validated,291.0,exact
+R652,HAL,2024,change_inventories,INR crore,-195864.0,100,-1958.64,-1958.64,0.0,0.0,L,R3:document only,reported,unverified,292.0,exact
+R654,HAL,2024,depreciation_and_amortisation,INR crore,140717.0,100,1407.17,1407.17,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,292.0,exact
+R657,HAL,2024,finance_costs,INR crore,3211.0,100,32.11,32.11,0.0,0.0,P,R1:P=L | web definition differs (web value not used) | web sources disagree,reported,warning,292.0,exact
+R658,HAL,2024,other_income,INR crore,189660.0,100,1896.6,1896.6,0.0,0.0,P,R1:P=L,reported,validated,292.0,exact
+R662,HAL,2024,revenue_from_operations,INR crore,3038108.0,100,30381.08,30381.08,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,292.0,exact
+R673,HAL,2024,eps_basic,INR,113.95,1,113.95,113.95,0.0,0.0,O,R4:O only,estimated,unverified,,exact
+R676,HAL,2025,cash_and_cash_equivalents,INR crore,454855.0,100,4548.55,4548.55,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,326.0,exact
+R678,HAL,2025,inventories,INR crore,2167570.0,100,21675.7,21675.7,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,326.0,exact
+R679,HAL,2025,other_bank_balances,INR crore,3363370.0,100,33633.7,33633.7,0.0,0.0,P_row,sum of current-asset 'bank balances other than cash' rows,reported,unverified,326.0,exact
+R680,HAL,2025,total_assets,INR crore,10626685.0,100,106266.85,106266.85,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,326.0,exact
+R686,HAL,2025,lease_liabilities,INR crore,116.0,100,1.16,1.16,0.0,0.0,L,R3:document only,reported,unverified,327.0,exact
+R687,HAL,2025,total_equity,INR crore,3498517.0,100,34985.17,34985.17,0.0,0.0,P,R1:P=L,reported,validated,327.0,exact
+R689,HAL,2025,change_inventories,INR crore,-762579.0,100,-7625.79,-7625.79,0.0,0.0,L,R3:document only,reported,unverified,328.0,exact
+R691,HAL,2025,depreciation_and_amortisation,INR crore,134037.0,100,1340.37,1340.37,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,328.0,exact
+R693,HAL,2025,finance_costs,INR crore,868.0,100,8.68,8.68,0.0,0.0,P,R1:P=L | web definition differs (web value not used) | web sources disagree,reported,warning,328.0,exact
+R698,HAL,2025,revenue_from_operations,INR crore,3098095.0,100,30980.95,30980.95,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,328.0,exact
+R708,HAL,2025,eps_basic,INR,125.07,1,125.07,125.07,0.0,0.0,O,R4:O only,estimated,unverified,,exact
+R712,HAL,2026,cash_and_cash_equivalents,INR crore,376766.0,100,3767.66,3767.66,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,319.0,exact
+R714,HAL,2026,inventories,INR crore,3085068.0,100,30850.68,30850.68,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,319.0,exact
+R715,HAL,2026,other_bank_balances,INR crore,4242913.0,100,42429.13,42429.13,0.0,0.0,P_row,sum of current-asset 'bank balances other than cash' rows,reported,unverified,319.0,exact
+R716,HAL,2026,total_assets,INR crore,13241459.0,100,132414.59,132414.59,0.0,0.0,P,R3:O agrees | web sources disagree,reported,warning,319.0,exact
+R724,HAL,2026,change_inventories,INR crore,-1002959.0,100,-10029.59,-10029.59,0.0,0.0,L,R3:document only,reported,unverified,321.0,exact
+R728,HAL,2026,finance_costs,INR crore,579.0,100,5.79,5.79,0.0,0.0,P,R1:P=L | web definition differs (web value not used) | web sources disagree,reported,warning,321.0,exact
+R733,HAL,2026,revenue_from_operations,INR crore,3308882.0,100,33088.82,33088.82,0.0,0.0,P,R1:P=L | web sources disagree,reported,warning,321.0,exact
+R738,HAL,2026,dividends_paid,INR crore,-334387.0,100,-3343.87,3343.87,6687.74,200.0,P,R1:P=L,reported,validated,326.0,exact
+R739,HAL,2026,financing_cash_flow,INR crore,-335039.0,100,-3350.39,-3350.39,0.0,0.0,P,R1:P=L,reported,validated,326.0,exact
+R743,HAL,2026,eps_basic,INR,136.3,1,136.3,136.3,0.0,0.0,O,R4:O only,estimated,unverified,,exact
+R748,HAL,2022,pat_owners,INR crore,508004.0,100,5080.04,5080.0,0.03999999999996362,0.0007873953748388521,O,O-only variable,estimated,unverified,,within_tolerance
+R749,HAL,2023,pat_owners,INR crore,582774.0,100,5827.74,5827.74,0.0,0.0,O,O-only variable,estimated,unverified,,exact
+R750,HAL,2024,pat_owners,INR crore,762105.0,100,7621.05,7621.05,0.0,0.0,O,O-only variable,estimated,unverified,,exact
+R751,HAL,2025,pat_owners,INR crore,836413.0,100,8364.13,8364.13,0.0,0.0,O,O-only variable,estimated,unverified,,exact
+R752,HAL,2026,pat_owners,INR crore,911560.0,100,9115.6,9115.6,0.0,0.0,O,O-only variable,estimated,unverified,,exact

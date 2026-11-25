@@ -1,0 +1,200 @@
+report_id,company,year,field,key_crore,final_value_crore,final_class,final_source,decision,review,pdf_value_crore,pdf_class,llp_value_crore,llp_class,ovr_value_crore,ovr_source,ovr_class,gap_crore,gap_pct
+AIRTEL_2024,AIRTEL,2024,current_liabilities,138667.80000000002,138667.80000000002,exact,llama,R3 only llama; O agrees,False,,not_covered,138667.80000000002,exact,138667.8,yfinance,exact,0.0,0.0
+AIRTEL_2024,AIRTEL,2024,ebit,35326.700000000004,35326.700000000004,exact,pdf,R1 P and L agree (<=0.1%),False,35326.700000000004,exact,35326.700000000004,exact,35327.0,screener,within_tolerance,0.0,0.0
+AIRTEL_2024,AIRTEL,2024,inventories,363.90000000000003,363.90000000000003,exact,pdf,R1 P and L agree (<=0.1%),False,363.90000000000003,exact,363.90000000000003,exact,363.9,yfinance,exact,0.0,0.0
+AIRTEL_2024,AIRTEL,2024,total_assets,444531.0,444531.0,exact,pdf,R1 P and L agree (<=0.1%),False,444531.0,exact,444531.0,exact,444531.0,yfinance,exact,0.0,0.0
+AIRTEL_2024,AIRTEL,2024,total_equity,105563.90000000001,105563.90000000001,exact,llama,R3 only llama; O agrees,False,,not_covered,105563.90000000001,exact,105563.9,yfinance,exact,0.0,0.0
+AIRTEL_2025,AIRTEL,2025,current_liabilities,180440.2,180440.2,exact,llama,R3 only llama; O agrees,False,,not_covered,180440.2,exact,180440.2,yfinance,exact,0.0,0.0
+AIRTEL_2025,AIRTEL,2025,ebit,60152.4,60152.4,exact,pdf,R1 P and L agree (<=0.1%),False,60152.4,exact,60152.4,exact,60152.0,screener,within_tolerance,0.0,0.0
+AIRTEL_2025,AIRTEL,2025,inventories,451.70000000000005,451.70000000000005,exact,pdf,R1 P and L agree (<=0.1%),False,451.70000000000005,exact,451.70000000000005,exact,451.7,yfinance,exact,0.0,0.0
+AIRTEL_2025,AIRTEL,2025,total_assets,514360.4,514360.4,exact,pdf,R1 P and L agree (<=0.1%),False,514360.4,exact,514360.4,exact,514360.4,yfinance,exact,0.0,0.0
+AIRTEL_2025,AIRTEL,2025,total_equity,153467.7,153467.7,exact,llama,R3 only llama; O agrees,False,,not_covered,153467.7,exact,153467.7,yfinance,exact,0.0,0.0
+AIRTEL_2026,AIRTEL,2026,current_liabilities,174505.7,174505.7,exact,llama,R3 only llama; O agrees,False,,not_covered,174505.7,exact,174505.7,yfinance,exact,0.0,0.0
+AIRTEL_2026,AIRTEL,2026,ebit,66728.0,66728.0,exact,pdf,R1 P and L agree (<=0.1%),False,66728.0,exact,66728.0,exact,66728.0,screener,exact,0.0,0.0
+AIRTEL_2026,AIRTEL,2026,inventories,600.9,600.9,exact,pdf,R1 P and L agree (<=0.1%),False,600.9,exact,600.9,exact,600.9,yfinance,exact,0.0,0.0
+AIRTEL_2026,AIRTEL,2026,total_assets,552151.6,552151.6,exact,pdf,R1 P and L agree (<=0.1%),False,552151.6,exact,552151.6,exact,552151.6,yfinance,exact,0.0,0.0
+AIRTEL_2026,AIRTEL,2026,total_equity,195963.40000000002,195963.40000000002,exact,llama,R3 only llama; O agrees,False,,not_covered,195963.40000000002,exact,195963.4,yfinance,exact,0.0,0.0
+HDFC_2023,HDFC,2023,ebit,123928.64,75352.47,mismatch,pdf,R1 P and L agree (<=0.1%),False,75352.47,mismatch,75352.47,mismatch,139278.0,screener,mismatch,-48576.17,-39.1969
+HDFC_2023,HDFC,2023,total_assets,2530432.44,2530432.44,exact,pdf,R1 P and L agree (<=0.1%),False,2530432.44,exact,2530432.44,exact,2575562.4,yfinance,mismatch,0.0,0.0
+HDFC_2023,HDFC,2023,total_equity,290297.76,290297.76,exact,llama,R3 only llama; O agrees,False,,not_covered,290297.76,exact,291783.79,yfinance,near,0.0,0.0
+HDFC_2024,HDFC,2024,ebit,219585.05,101586.88000000003,mismatch,pdf,R1 P and L agree (<=0.1%),False,101586.88000000003,mismatch,101586.88000000003,mismatch,230708.0,screener,mismatch,-117998.17,-53.7369
+HDFC_2024,HDFC,2024,total_assets,4030194.26,4030194.26,exact,pdf,R1 P and L agree (<=0.1%),False,4030194.26,exact,4030194.26,exact,,,not_covered,0.0,0.0
+HDFC_2024,HDFC,2024,total_equity,469778.65,467125.93000000005,near,llama,R3b only llama; O differs by >10% (implausible): document value kept (REVIEW),True,,not_covered,467125.93000000005,near,788618.28,yfinance,mismatch,-2652.72,-0.5647
+HDFC_2025,HDFC,2025,ebit,257334.37,110416.65999999997,mismatch,pdf,R1 P and L agree (<=0.1%),False,110416.65999999997,mismatch,110416.65999999997,mismatch,280136.0,screener,mismatch,-146917.71,-57.0921
+HDFC_2025,HDFC,2025,total_assets,4392417.42,4392417.42,exact,pdf,R1 P and L agree (<=0.1%),False,4392417.42,exact,4392417.42,exact,4818767.11,yfinance,mismatch,0.0,0.0
+HDFC_2025,HDFC,2025,total_equity,538148.43,534343.24,near,llama,R3b only llama; O differs by >10% (implausible): document value kept (REVIEW),True,,not_covered,534343.24,near,862289.1,yfinance,mismatch,-3805.19,-0.7071
+HDFC_2026,HDFC,2026,ebit,264710.69,128797.66999999995,mismatch,pdf,R1 P and L agree (<=0.1%),False,128797.66999999995,mismatch,128797.66999999995,mismatch,287632.0,screener,mismatch,-135913.02,-51.344
+HDFC_2026,HDFC,2026,total_assets,4908040.84,4908040.84,exact,pdf,R1 P and L agree (<=0.1%),False,4908040.84,exact,4908040.84,exact,5262119.32,yfinance,mismatch,0.0,0.0
+HDFC_2026,HDFC,2026,total_equity,608444.43,603899.32,near,llama,R3b only llama; O differs by >10% (implausible): document value kept (REVIEW),True,,not_covered,603899.32,near,916069.47,yfinance,mismatch,-4545.11,-0.747
+INFOSYS_2023,INFOSYS,2023,current_liabilities,39186.0,39186.0,exact,pdf,R1 P and L agree (<=0.1%),False,39186.0,exact,39186.0,exact,39186.0,nse,exact,0.0,0.0
+INFOSYS_2023,INFOSYS,2023,ebit,33606.0,33606.0,exact,pdf,R1 P and L agree (<=0.1%),False,33606.0,exact,33606.0,exact,33606.0,screener,exact,0.0,0.0
+INFOSYS_2023,INFOSYS,2023,total_assets,125816.0,125816.0,exact,pdf,R1 P and L agree (<=0.1%),False,125816.0,exact,125816.0,exact,125816.0,nse,exact,0.0,0.0
+INFOSYS_2023,INFOSYS,2023,total_equity,75795.0,75795.0,exact,pdf,R1 P and L agree (<=0.1%),False,75795.0,exact,75795.0,exact,75795.0,nse,exact,0.0,0.0
+INFOSYS_2024,INFOSYS,2024,current_liabilities,38794.0,38794.0,exact,pdf,R1 P and L agree (<=0.1%),False,38794.0,exact,38794.0,exact,38794.0,nse,exact,0.0,0.0
+INFOSYS_2024,INFOSYS,2024,ebit,36458.0,36458.0,exact,pdf,R1 P and L agree (<=0.1%),False,36458.0,exact,36458.0,exact,36458.0,screener,exact,0.0,0.0
+INFOSYS_2024,INFOSYS,2024,total_assets,137814.0,137814.0,exact,pdf,R1 P and L agree (<=0.1%),False,137814.0,exact,137814.0,exact,137814.0,nse,exact,0.0,0.0
+INFOSYS_2024,INFOSYS,2024,total_equity,88461.0,88461.0,exact,pdf,R1 P and L agree (<=0.1%),False,88461.0,exact,88461.0,exact,88461.0,nse,exact,0.0,0.0
+INFOSYS_2025,INFOSYS,2025,current_liabilities,42850.0,42850.0,exact,pdf,R1 P and L agree (<=0.1%),False,42850.0,exact,42850.0,exact,,,not_covered,0.0,0.0
+INFOSYS_2025,INFOSYS,2025,ebit,38024.0,38024.0,exact,pdf,R1 P and L agree (<=0.1%),False,38024.0,exact,38024.0,exact,38024.0,screener,exact,0.0,0.0
+INFOSYS_2025,INFOSYS,2025,total_assets,148903.0,148903.0,exact,pdf,R1 P and L agree (<=0.1%),False,148903.0,exact,148903.0,exact,147795.0,screener,near,0.0,0.0
+INFOSYS_2025,INFOSYS,2025,total_equity,96203.0,96203.0,exact,pdf,R1 P and L agree (<=0.1%),False,96203.0,exact,96203.0,exact,95818.0,screener,near,0.0,0.0
+INFOSYS_2026,INFOSYS,2026,current_liabilities,52322.0,52322.0,exact,pdf,R1 P and L agree (<=0.1%),False,52322.0,exact,52322.0,exact,,,not_covered,0.0,0.0
+INFOSYS_2026,INFOSYS,2026,ebit,40411.0,40411.0,exact,pdf,R1 P and L agree (<=0.1%),False,40411.0,exact,40411.0,exact,40411.0,screener,exact,0.0,0.0
+INFOSYS_2026,INFOSYS,2026,total_assets,155967.0,155967.0,exact,pdf,R1 P and L agree (<=0.1%),False,155967.0,exact,155967.0,exact,154288.0,screener,mismatch,0.0,0.0
+INFOSYS_2026,INFOSYS,2026,total_equity,93297.0,93297.0,exact,pdf,R1 P and L agree (<=0.1%),False,93297.0,exact,93297.0,exact,92852.0,screener,near,0.0,0.0
+MSIL_2024,MSIL,2024,current_liabilities,25951.800000000003,25951.800000000003,exact,pdf,R1 P and L agree (<=0.1%),False,25951.800000000003,exact,25951.800000000003,exact,25951.8,yfinance,exact,0.0,0.0
+MSIL_2024,MSIL,2024,ebit,17618.100000000002,17618.100000000002,exact,pdf,R1 P and L agree (<=0.1%),False,17618.100000000002,exact,17618.100000000002,exact,17618.0,screener,within_tolerance,0.0,0.0
+MSIL_2024,MSIL,2024,inventories,5318.1,5318.1,exact,pdf,R1 P and L agree (<=0.1%),False,5318.1,exact,5318.1,exact,5318.1,yfinance,exact,0.0,0.0
+MSIL_2024,MSIL,2024,total_assets,115350.8,115350.8,exact,pdf,R1 P and L agree (<=0.1%),False,115350.8,exact,115350.8,exact,115350.8,yfinance,exact,0.0,0.0
+MSIL_2024,MSIL,2024,total_equity,85636.0,85636.0,exact,pdf,R1 P and L agree (<=0.1%),False,85636.0,exact,85636.0,exact,85636.0,yfinance,exact,0.0,0.0
+MSIL_2025,MSIL,2025,current_liabilities,30570.5,30570.5,exact,pdf,R1 P and L agree (<=0.1%),False,30570.5,exact,30570.5,exact,29615.0,yfinance,mismatch,0.0,0.0
+MSIL_2025,MSIL,2025,ebit,19814.2,19814.2,exact,pdf,R1 P and L agree (<=0.1%),False,19814.2,exact,19814.2,exact,19814.0,screener,within_tolerance,0.0,0.0
+MSIL_2025,MSIL,2025,inventories,6913.200000000001,6913.200000000001,exact,pdf,R1 P and L agree (<=0.1%),False,6913.200000000001,exact,6913.200000000001,exact,6913.2,yfinance,exact,0.0,0.0
+MSIL_2025,MSIL,2025,total_assets,131971.80000000002,131971.80000000002,exact,pdf,R1 P and L agree (<=0.1%),False,131971.80000000002,exact,131971.80000000002,exact,131016.3,yfinance,near,0.0,0.0
+MSIL_2025,MSIL,2025,total_equity,96239.90000000001,96239.90000000001,exact,pdf,R1 P and L agree (<=0.1%),False,96239.90000000001,exact,96239.90000000001,exact,96239.9,yfinance,exact,0.0,0.0
+MSIL_2026,MSIL,2026,current_liabilities,36480.200000000004,36480.200000000004,exact,pdf,R1 P and L agree (<=0.1%),False,36480.200000000004,exact,36480.200000000004,exact,36480.2,yfinance,exact,0.0,0.0
+MSIL_2026,MSIL,2026,ebit,19357.2,19357.2,exact,pdf,R1 P and L agree (<=0.1%),False,19357.2,exact,19357.2,exact,19357.0,screener,within_tolerance,0.0,0.0
+MSIL_2026,MSIL,2026,inventories,11320.6,11320.6,exact,pdf,R1 P and L agree (<=0.1%),False,11320.6,exact,11320.6,exact,11320.6,yfinance,exact,0.0,0.0
+MSIL_2026,MSIL,2026,total_assets,148881.0,148881.0,exact,pdf,R1 P and L agree (<=0.1%),False,148881.0,exact,148881.0,exact,148881.0,yfinance,exact,0.0,0.0
+MSIL_2026,MSIL,2026,total_equity,107156.3,107156.3,exact,pdf,R1 P and L agree (<=0.1%),False,107156.3,exact,107156.3,exact,107156.3,yfinance,exact,0.0,0.0
+PAYTM_2023,PAYTM,2023,current_liabilities,4486.900000000001,4486.900000000001,exact,pdf,R1 P and L agree (<=0.1%),False,4486.900000000001,exact,4486.900000000001,exact,4486.9,yfinance,exact,0.0,0.0
+PAYTM_2023,PAYTM,2023,ebit,-1719.6000000000001,-1719.6000000000001,exact,pdf,R3 only pdf; O agrees,False,-1719.6000000000001,exact,,not_covered,-1719.0,screener,within_tolerance,0.0,0.0
+PAYTM_2023,PAYTM,2023,total_assets,17965.8,17965.8,exact,pdf,R1 P and L agree (<=0.1%),False,17965.8,exact,17965.8,exact,17965.8,yfinance,exact,0.0,0.0
+PAYTM_2023,PAYTM,2023,total_equity,12992.900000000001,12992.900000000001,exact,pdf,R1 P and L agree (<=0.1%),False,12992.900000000001,exact,12992.900000000001,exact,12992.9,yfinance,exact,0.0,0.0
+PAYTM_2024,PAYTM,2024,current_liabilities,3515.3,3515.3,exact,pdf,R1 P and L agree (<=0.1%),False,3515.3,exact,3515.3,exact,5069.0,yfinance,mismatch,0.0,0.0
+PAYTM_2024,PAYTM,2024,ebit,-1366.1000000000001,-1366.1000000000001,exact,pdf,R1 P and L agree (<=0.1%),False,-1366.1000000000001,exact,-1366.1000000000001,exact,-1364.0,screener,near,0.0,0.0
+PAYTM_2024,PAYTM,2024,total_assets,17139.100000000002,17139.100000000002,exact,pdf,R1 P and L agree (<=0.1%),False,17139.100000000002,exact,17139.100000000002,exact,18692.8,yfinance,mismatch,0.0,0.0
+PAYTM_2024,PAYTM,2024,total_equity,13298.400000000001,13298.400000000001,exact,pdf,R1 P and L agree (<=0.1%),False,13298.400000000001,exact,13298.400000000001,exact,13298.4,yfinance,exact,0.0,0.0
+PAYTM_2025,PAYTM,2025,current_liabilities,6186.400000000001,6186.400000000001,exact,pdf,R1 P and L agree (<=0.1%),False,6186.400000000001,exact,6186.400000000001,exact,6187.0,yfinance,within_tolerance,0.0,0.0
+PAYTM_2025,PAYTM,2025,ebit,-628.8000000000001,-628.8000000000001,exact,pdf,R3 only pdf; O agrees,False,-628.8000000000001,exact,,not_covered,-628.0,screener,near,0.0,0.0
+PAYTM_2025,PAYTM,2025,total_assets,21447.7,21447.7,exact,pdf,R1 P and L agree (<=0.1%),False,21447.7,exact,21447.7,exact,21448.0,yfinance,within_tolerance,0.0,0.0
+PAYTM_2025,PAYTM,2025,total_equity,14997.1,14997.1,exact,pdf,R1 P and L agree (<=0.1%),False,14997.1,exact,14997.1,exact,14997.0,yfinance,within_tolerance,0.0,0.0
+PAYTM_2026,PAYTM,2026,current_liabilities,7596.0,7596.0,exact,pdf,R1 P and L agree (<=0.1%),False,7596.0,exact,7596.0,exact,7596.0,yfinance,exact,0.0,0.0
+PAYTM_2026,PAYTM,2026,ebit,600.0,600.0,exact,pdf,R1 P and L agree (<=0.1%),False,600.0,exact,600.0,exact,601.0,screener,within_tolerance,0.0,0.0
+PAYTM_2026,PAYTM,2026,total_assets,23915.0,23915.0,exact,pdf,R1 P and L agree (<=0.1%),False,23915.0,exact,23915.0,exact,23915.0,yfinance,exact,0.0,0.0
+PAYTM_2026,PAYTM,2026,total_equity,16028.0,16028.0,exact,pdf,R1 P and L agree (<=0.1%),False,16028.0,exact,16028.0,exact,16028.0,yfinance,exact,0.0,0.0
+RIL_2023,RIL,2023,current_liabilities,395743.0,395743.0,exact,pdf,R1 P and L agree (<=0.1%),False,395743.0,exact,395743.0,exact,395743.0,yfinance,exact,0.0,0.0
+RIL_2023,RIL,2023,ebit,113617.0,113617.0,exact,pdf,R1 P and L agree (<=0.1%),False,113617.0,exact,113617.0,exact,114035.0,screener,near,0.0,0.0
+RIL_2023,RIL,2023,inventories,140008.0,140008.0,exact,pdf,R1 P and L agree (<=0.1%),False,140008.0,exact,140008.0,exact,140008.0,yfinance,exact,0.0,0.0
+RIL_2023,RIL,2023,total_assets,1607431.0,1607431.0,exact,pdf,R1 P and L agree (<=0.1%),False,1607431.0,exact,1607431.0,exact,1607431.0,yfinance,exact,0.0,0.0
+RIL_2023,RIL,2023,total_equity,828881.0,828881.0,exact,pdf,R1 P and L agree (<=0.1%),False,828881.0,exact,828881.0,exact,,,not_covered,0.0,0.0
+RIL_2024,RIL,2024,current_liabilities,397367.0,397367.0,exact,pdf,R1 P and L agree (<=0.1%),False,397367.0,exact,397367.0,exact,397367.0,yfinance,exact,0.0,0.0
+RIL_2024,RIL,2024,ebit,127845.0,127845.0,exact,pdf,R1 P and L agree (<=0.1%),False,127845.0,exact,127845.0,exact,127458.0,screener,near,0.0,0.0
+RIL_2024,RIL,2024,inventories,152770.0,152770.0,exact,pdf,R1 P and L agree (<=0.1%),False,152770.0,exact,152770.0,exact,152770.0,yfinance,exact,0.0,0.0
+RIL_2024,RIL,2024,total_assets,1755986.0,1755986.0,exact,pdf,R1 P and L agree (<=0.1%),False,1755986.0,exact,1755986.0,exact,1755986.0,yfinance,exact,0.0,0.0
+RIL_2024,RIL,2024,total_equity,925788.0,925788.0,exact,pdf,R1 P and L agree (<=0.1%),False,925788.0,exact,925788.0,exact,925788.0,yfinance,exact,0.0,0.0
+RIL_2025,RIL,2025,current_liabilities,453737.0,453737.0,exact,pdf,R1 P and L agree (<=0.1%),False,453737.0,exact,453737.0,exact,453737.0,yfinance,exact,0.0,0.0
+RIL_2025,RIL,2025,ebit,130286.0,130286.0,exact,override: screener,R4 override only,False,,not_covered,,not_covered,130286.0,screener,exact,0.0,0.0
+RIL_2025,RIL,2025,inventories,146062.0,146062.0,exact,pdf,R1 P and L agree (<=0.1%),False,146062.0,exact,146062.0,exact,146062.0,yfinance,exact,0.0,0.0
+RIL_2025,RIL,2025,total_assets,1950121.0,1950121.0,exact,pdf,R1 P and L agree (<=0.1%),False,1950121.0,exact,1950121.0,exact,1950121.0,yfinance,exact,0.0,0.0
+RIL_2025,RIL,2025,total_equity,1009626.0,1009626.0,exact,pdf,R1 P and L agree (<=0.1%),False,1009626.0,exact,1009626.0,exact,1009626.0,yfinance,exact,0.0,0.0
+RIL_2026,RIL,2026,current_liabilities,541254.0,541254.0,exact,pdf,R1 P and L agree (<=0.1%),False,541254.0,exact,541254.0,exact,541254.0,yfinance,exact,0.0,0.0
+RIL_2026,RIL,2026,ebit,150223.0,150223.0,exact,override: screener,R4 override only,False,,not_covered,,not_covered,150223.0,screener,exact,0.0,0.0
+RIL_2026,RIL,2026,inventories,166941.0,166941.0,exact,pdf,R1 P and L agree (<=0.1%),False,166941.0,exact,166941.0,exact,166941.0,yfinance,exact,0.0,0.0
+RIL_2026,RIL,2026,total_assets,2178140.0,2178140.0,exact,pdf,R1 P and L agree (<=0.1%),False,2178140.0,exact,2178140.0,exact,2178140.0,yfinance,exact,0.0,0.0
+RIL_2026,RIL,2026,total_equity,1085866.0,1085866.0,exact,pdf,R1 P and L agree (<=0.1%),False,1085866.0,exact,1085866.0,exact,1085866.0,yfinance,exact,0.0,0.0
+SPIL_2024,SPIL,2024,current_liabilities,16983.77,16983.77,exact,pdf,R1 P and L agree (<=0.1%),False,16983.77,exact,16983.77,exact,16984.4,yfinance,within_tolerance,0.0,0.0
+SPIL_2024,SPIL,2024,ebit,11326.36,11326.36,exact,pdf,R1 P and L agree (<=0.1%),False,11326.36,exact,11326.36,exact,11326.0,screener,within_tolerance,0.0,0.0
+SPIL_2024,SPIL,2024,inventories,9868.29,9868.29,exact,pdf,R1 P and L agree (<=0.1%),False,9868.29,exact,9868.29,exact,9868.29,yfinance,exact,0.0,0.0
+SPIL_2024,SPIL,2024,total_assets,85462.88,85462.88,exact,pdf,R1 P and L agree (<=0.1%),False,85462.88,exact,85462.88,exact,85499.65,yfinance,within_tolerance,0.0,0.0
+SPIL_2024,SPIL,2024,total_equity,67105.97,67105.97,exact,pdf,R1 P and L agree (<=0.1%),False,67105.97,exact,67105.97,exact,67125.94,yfinance,within_tolerance,0.0,0.0
+SPIL_2025,SPIL,2025,current_liabilities,18194.210000000003,18194.210000000003,exact,pdf,R3 only pdf; O agrees,False,18194.210000000003,exact,,not_covered,18194.21,yfinance,exact,0.0,0.0
+SPIL_2025,SPIL,2025,ebit,13983.49,13983.49,exact,pdf,R1 P and L agree (<=0.1%),False,13983.49,exact,13983.49,exact,13983.0,screener,within_tolerance,0.0,0.0
+SPIL_2025,SPIL,2025,inventories,10243.330000000002,10243.330000000002,exact,pdf,R1 P and L agree (<=0.1%),False,10243.330000000002,exact,10243.330000000002,exact,10243.33,yfinance,exact,0.0,0.0
+SPIL_2025,SPIL,2025,total_assets,92100.58000000002,92100.58000000002,exact,pdf,R1 P and L agree (<=0.1%),False,92100.58000000002,exact,92100.58000000002,exact,92100.58,yfinance,exact,0.0,0.0
+SPIL_2025,SPIL,2025,total_equity,72485.95,72485.95,exact,pdf,R1 P and L agree (<=0.1%),False,72485.95,exact,72485.95,exact,72485.95,yfinance,exact,0.0,0.0
+SPIL_2026,SPIL,2026,current_liabilities,22622.04,22622.04,exact,pdf,R1 P and L agree (<=0.1%),False,22622.04,exact,22622.04,exact,22622.04,yfinance,exact,0.0,0.0
+SPIL_2026,SPIL,2026,ebit,15457.79,15457.79,exact,pdf,R1 P and L agree (<=0.1%),False,15457.79,exact,15457.79,exact,15458.0,screener,within_tolerance,0.0,0.0
+SPIL_2026,SPIL,2026,inventories,11492.93,11492.93,exact,pdf,R1 P and L agree (<=0.1%),False,11492.93,exact,11492.93,exact,11492.93,yfinance,exact,0.0,0.0
+SPIL_2026,SPIL,2026,total_assets,108785.22,108785.22,exact,pdf,R1 P and L agree (<=0.1%),False,108785.22,exact,108785.22,exact,108785.22,yfinance,exact,0.0,0.0
+SPIL_2026,SPIL,2026,total_equity,83879.74,83879.74,exact,pdf,R1 P and L agree (<=0.1%),False,83879.74,exact,83879.74,exact,83879.74,yfinance,exact,0.0,0.0
+SWIGGY_2025,SWIGGY,2025,current_liabilities,3587.5980000000004,3587.5980000000004,exact,pdf,R1 P and L agree (<=0.1%),False,3587.5980000000004,exact,3587.5980000000004,exact,3587.0,yfinance,within_tolerance,0.0,0.0
+SWIGGY_2025,SWIGGY,2025,ebit,-3016.213,-3016.213,exact,pdf,R3 only pdf; O agrees,False,-3016.213,exact,,not_covered,-3016.0,screener,within_tolerance,0.0,0.0
+SWIGGY_2025,SWIGGY,2025,inventories,55.488,55.488,exact,pdf,R1 P and L agree (<=0.1%),False,55.488,exact,55.488,exact,55.0,yfinance,near,0.0,0.0
+SWIGGY_2025,SWIGGY,2025,total_assets,15205.318,15205.318,exact,pdf,R1 P and L agree (<=0.1%),False,15205.318,exact,15205.318,exact,15205.0,yfinance,within_tolerance,0.0,0.0
+SWIGGY_2025,SWIGGY,2025,total_equity,10219.487000000001,10219.487000000001,exact,pdf,R1 P and L agree (<=0.1%),False,10219.487000000001,exact,10219.487000000001,exact,10220.0,yfinance,within_tolerance,0.0,0.0
+SWIGGY_2026,SWIGGY,2026,current_liabilities,4877.0,4877.0,exact,pdf,R1 P and L agree (<=0.1%),False,4877.0,exact,4877.0,exact,4877.0,yfinance,exact,0.0,0.0
+SWIGGY_2026,SWIGGY,2026,ebit,-3954.0,-3954.0,exact,override: screener,R4 override only,False,,not_covered,,not_covered,-3954.0,screener,exact,0.0,0.0
+SWIGGY_2026,SWIGGY,2026,inventories,76.0,76.0,exact,pdf,R1 P and L agree (<=0.1%),False,76.0,exact,76.0,exact,76.0,yfinance,exact,0.0,0.0
+SWIGGY_2026,SWIGGY,2026,total_assets,25237.0,25237.0,exact,pdf,R3 only pdf; O agrees,False,25237.0,exact,,not_covered,25237.0,yfinance,exact,0.0,0.0
+SWIGGY_2026,SWIGGY,2026,total_equity,18314.0,18314.0,exact,pdf,R1 P and L agree (<=0.1%),False,18314.0,exact,18314.0,exact,18314.0,yfinance,exact,0.0,0.0
+TCS_2025,TCS,2025,current_liabilities,53001.0,53001.0,exact,pdf,R1 P and L agree (<=0.1%),False,53001.0,exact,53001.0,exact,53001.0,yfinance,exact,0.0,0.0
+TCS_2025,TCS,2025,ebit,66127.0,66127.0,exact,pdf,R1 P and L agree (<=0.1%),False,66127.0,exact,66127.0,exact,66127.0,screener,exact,0.0,0.0
+TCS_2025,TCS,2025,inventories,21.0,21.0,exact,llama,R3 only llama; O agrees,False,,not_covered,21.0,exact,21.0,yfinance,exact,0.0,0.0
+TCS_2025,TCS,2025,total_assets,159629.0,159629.0,exact,pdf,R1 P and L agree (<=0.1%),False,159629.0,exact,159629.0,exact,159629.0,yfinance,exact,0.0,0.0
+TCS_2025,TCS,2025,total_equity,95771.0,95771.0,exact,llama,R3 only llama; O agrees,False,,not_covered,95771.0,exact,95771.0,yfinance,exact,0.0,0.0
+TCS_2026,TCS,2026,current_liabilities,60914.0,60914.0,exact,pdf,R1 P and L agree (<=0.1%),False,60914.0,exact,60914.0,exact,60914.0,yfinance,exact,0.0,0.0
+TCS_2026,TCS,2026,ebit,66714.0,66714.0,exact,pdf,R1 P and L agree (<=0.1%),False,66714.0,exact,66714.0,exact,66714.0,screener,exact,0.0,0.0
+TCS_2026,TCS,2026,inventories,29.0,29.0,exact,pdf,R1 P and L agree (<=0.1%),False,29.0,exact,29.0,exact,29.0,yfinance,exact,0.0,0.0
+TCS_2026,TCS,2026,total_assets,182372.0,182372.0,exact,pdf,R1 P and L agree (<=0.1%),False,182372.0,exact,182372.0,exact,182372.0,yfinance,exact,0.0,0.0
+TCS_2026,TCS,2026,total_equity,108478.0,108478.0,exact,override: yfinance,R4 override only,False,,not_covered,,not_covered,108478.0,yfinance,exact,0.0,0.0
+TITAN_2023,TITAN,2023,current_liabilities,13264.0,13264.0,exact,llama,R3 only llama; O agrees,False,,not_covered,13264.0,exact,13264.0,yfinance,exact,0.0,0.0
+TITAN_2023,TITAN,2023,ebit,4747.0,4747.0,exact,pdf,R1 P and L agree (<=0.1%),False,4747.0,exact,4747.0,exact,4747.0,screener,exact,0.0,0.0
+TITAN_2023,TITAN,2023,inventories,16584.0,16584.0,exact,pdf,R1 P and L agree (<=0.1%),False,16584.0,exact,16584.0,exact,16584.0,yfinance,exact,0.0,0.0
+TITAN_2023,TITAN,2023,total_assets,27023.0,27023.0,exact,pdf,R1 P and L agree (<=0.1%),False,27023.0,exact,27023.0,exact,27023.0,yfinance,exact,0.0,0.0
+TITAN_2023,TITAN,2023,total_equity,11904.0,11904.0,exact,pdf,R1 P and L agree (<=0.1%),False,11904.0,exact,11904.0,exact,11904.0,yfinance,exact,0.0,0.0
+TITAN_2024,TITAN,2024,current_liabilities,16529.0,16529.0,exact,llama,R3 only llama; O agrees,False,,not_covered,16529.0,exact,16529.0,yfinance,exact,0.0,0.0
+TITAN_2024,TITAN,2024,ebit,5242.0,5242.0,exact,pdf,R3 only pdf; O agrees,False,5242.0,exact,,not_covered,5242.0,screener,exact,0.0,0.0
+TITAN_2024,TITAN,2024,inventories,19051.0,19051.0,exact,pdf,R1 P and L agree (<=0.1%),False,19051.0,exact,19051.0,exact,19051.0,yfinance,exact,0.0,0.0
+TITAN_2024,TITAN,2024,total_assets,31550.0,31550.0,exact,pdf,R1 P and L agree (<=0.1%),False,31550.0,exact,31550.0,exact,31550.0,yfinance,exact,0.0,0.0
+TITAN_2024,TITAN,2024,total_equity,9393.0,9393.0,exact,pdf,R1 P and L agree (<=0.1%),False,9393.0,exact,9393.0,exact,9393.0,yfinance,exact,0.0,0.0
+TITAN_2025,TITAN,2025,current_liabilities,25793.0,25793.0,exact,llama,R3 only llama; O agrees,False,,not_covered,25793.0,exact,25793.0,yfinance,exact,0.0,0.0
+TITAN_2025,TITAN,2025,ebit,5488.0,5488.0,exact,pdf,R1 P and L agree (<=0.1%),False,5488.0,exact,5488.0,exact,5488.0,screener,exact,0.0,0.0
+TITAN_2025,TITAN,2025,inventories,28184.0,28184.0,exact,pdf,R1 P and L agree (<=0.1%),False,28184.0,exact,28184.0,exact,28184.0,yfinance,exact,0.0,0.0
+TITAN_2025,TITAN,2025,total_assets,40647.0,40647.0,exact,pdf,R1 P and L agree (<=0.1%),False,40647.0,exact,40647.0,exact,40647.0,yfinance,exact,0.0,0.0
+TITAN_2025,TITAN,2025,total_equity,11624.0,11624.0,exact,pdf,R1 P and L agree (<=0.1%),False,11624.0,exact,11624.0,exact,11624.0,yfinance,exact,0.0,0.0
+TITAN_2026,TITAN,2026,current_liabilities,39793.0,39793.0,exact,llama,R3 only llama; O agrees,False,,not_covered,39793.0,exact,39793.0,yfinance,exact,0.0,0.0
+TITAN_2026,TITAN,2026,ebit,7981.0,7981.0,exact,pdf,R1 P and L agree (<=0.1%),False,7981.0,exact,7981.0,exact,7981.0,screener,exact,0.0,0.0
+TITAN_2026,TITAN,2026,inventories,42743.0,42743.0,exact,pdf,R1 P and L agree (<=0.1%),False,42743.0,exact,42743.0,exact,42743.0,yfinance,exact,0.0,0.0
+TITAN_2026,TITAN,2026,total_assets,60561.0,60561.0,exact,pdf,R1 P and L agree (<=0.1%),False,60561.0,exact,60561.0,exact,60561.0,yfinance,exact,0.0,0.0
+TITAN_2026,TITAN,2026,total_equity,15703.0,15703.0,exact,pdf,R1 P and L agree (<=0.1%),False,15703.0,exact,15703.0,exact,15703.0,yfinance,exact,0.0,0.0
+TS_2024,TS,2024,current_liabilities,98403.48,98403.48,exact,pdf,R1 P and L agree (<=0.1%),False,98403.48,exact,98403.48,exact,98403.48,yfinance,exact,0.0,0.0
+TS_2024,TS,2024,ebit,6360.53,6360.53,exact,pdf,R1 P and L agree (<=0.1%),False,6360.53,exact,6360.53,exact,6361.0,screener,within_tolerance,0.0,0.0
+TS_2024,TS,2024,inventories,49157.51,49157.51,exact,pdf,R1 P and L agree (<=0.1%),False,49157.51,exact,49157.51,exact,49157.51,yfinance,exact,0.0,0.0
+TS_2024,TS,2024,total_assets,273423.5,273423.5,exact,pdf,R1 P and L agree (<=0.1%),False,273423.5,exact,273423.5,exact,273423.5,yfinance,exact,0.0,0.0
+TS_2024,TS,2024,total_equity,92432.74,92432.74,exact,pdf,R1 P and L agree (<=0.1%),False,92432.74,exact,92432.74,exact,92432.74,yfinance,exact,0.0,0.0
+TS_2025,TS,2025,current_liabilities,86093.55,86093.55,exact,pdf,R1 P and L agree (<=0.1%),False,86093.55,exact,86093.55,exact,86093.56,yfinance,within_tolerance,0.0,0.0
+TS_2025,TS,2025,ebit,15753.82,15753.82,exact,pdf,R1 P and L agree (<=0.1%),False,15753.82,exact,15753.82,exact,15754.0,screener,within_tolerance,0.0,0.0
+TS_2025,TS,2025,inventories,44589.94,44589.94,exact,pdf,R1 P and L agree (<=0.1%),False,44589.94,exact,44589.94,exact,44589.94,yfinance,exact,0.0,0.0
+TS_2025,TS,2025,total_assets,279394.8,279394.8,exact,pdf,R1 P and L agree (<=0.1%),False,279394.8,exact,279394.8,exact,279394.8,yfinance,exact,0.0,0.0
+TS_2025,TS,2025,total_equity,91352.78,91352.78,exact,pdf,R1 P and L agree (<=0.1%),False,91352.78,exact,91352.78,exact,91352.78,yfinance,exact,0.0,0.0
+TS_2026,TS,2026,current_liabilities,96917.64,96917.64,exact,pdf,R1 P and L agree (<=0.1%),False,96917.64,exact,96917.64,exact,96917.64,yfinance,exact,0.0,0.0
+TS_2026,TS,2026,ebit,23135.75,23135.75,exact,pdf,R1 P and L agree (<=0.1%),False,23135.75,exact,23135.75,exact,23136.0,screener,within_tolerance,0.0,0.0
+TS_2026,TS,2026,inventories,47249.22,47249.22,exact,pdf,R1 P and L agree (<=0.1%),False,47249.22,exact,47249.22,exact,47249.22,yfinance,exact,0.0,0.0
+TS_2026,TS,2026,total_assets,301254.11,301254.11,exact,pdf,R1 P and L agree (<=0.1%),False,301254.11,exact,301254.11,exact,301254.11,yfinance,exact,0.0,0.0
+TS_2026,TS,2026,total_equity,103780.45,103780.45,exact,pdf,R1 P and L agree (<=0.1%),False,103780.45,exact,103780.45,exact,103780.45,yfinance,exact,0.0,0.0
+UTCL_2024,UTCL,2024,current_liabilities,26905.96,26905.96,exact,pdf,R1 P and L agree (<=0.1%),False,26905.96,exact,26905.96,exact,26905.96,yfinance,exact,0.0,0.0
+UTCL_2024,UTCL,2024,ebit,10390.22,10390.22,exact,pdf,R3 only pdf; O agrees,False,10390.22,exact,,not_covered,10390.0,screener,within_tolerance,0.0,0.0
+UTCL_2024,UTCL,2024,inventories,8329.74,8329.74,exact,pdf,R1 P and L agree (<=0.1%),False,8329.74,exact,8329.74,exact,8329.74,yfinance,exact,0.0,0.0
+UTCL_2024,UTCL,2024,total_assets,100802.01,100802.01,exact,pdf,R1 P and L agree (<=0.1%),False,100802.01,exact,100802.01,exact,100802.01,yfinance,exact,0.0,0.0
+UTCL_2024,UTCL,2024,total_equity,60283.41,60283.41,exact,llama,R3 only llama; O agrees,False,,not_covered,60283.41,exact,60283.42,yfinance,within_tolerance,0.0,0.0
+UTCL_2025,UTCL,2025,current_liabilities,32364.97,32364.97,exact,pdf,R1 P and L agree (<=0.1%),False,32364.97,exact,32364.97,exact,32364.97,yfinance,exact,0.0,0.0
+UTCL_2025,UTCL,2025,ebit,9178.67,9178.67,exact,pdf,R3 only pdf; O agrees,False,9178.67,exact,,not_covered,9179.0,screener,within_tolerance,0.0,0.0
+UTCL_2025,UTCL,2025,inventories,9562.98,9562.98,exact,pdf,R1 P and L agree (<=0.1%),False,9562.98,exact,9562.98,exact,9562.98,yfinance,exact,0.0,0.0
+UTCL_2025,UTCL,2025,total_assets,133697.15,133697.15,exact,pdf,R1 P and L agree (<=0.1%),False,133697.15,exact,133697.15,exact,133697.16,yfinance,within_tolerance,0.0,0.0
+UTCL_2025,UTCL,2025,total_equity,73892.8,73892.8,exact,override: yfinance,R3 only llama; O differs by 1-10%: O taken,False,,not_covered,77079.39,mismatch,73892.8,yfinance,exact,0.0,0.0
+UTCL_2026,UTCL,2026,current_liabilities,33831.7,33831.7,exact,pdf,R1 P and L agree (<=0.1%),False,33831.7,exact,33831.7,exact,33831.7,yfinance,exact,0.0,0.0
+UTCL_2026,UTCL,2026,ebit,12798.9,12798.900000000001,exact,pdf,R1 P and L agree (<=0.1%),False,12798.900000000001,exact,12798.900000000001,exact,12799.0,screener,within_tolerance,0.0,0.0
+UTCL_2026,UTCL,2026,inventories,9694.28,9694.28,exact,pdf,R1 P and L agree (<=0.1%),False,9694.28,exact,9694.28,exact,9694.28,yfinance,exact,0.0,0.0
+UTCL_2026,UTCL,2026,total_assets,141376.05,141376.05,exact,pdf,R1 P and L agree (<=0.1%),False,141376.05,exact,141376.05,exact,141376.06,yfinance,within_tolerance,0.0,0.0
+UTCL_2026,UTCL,2026,total_equity,80712.44,80712.44,exact,llama,R3 only llama; O agrees,False,,not_covered,80712.44,exact,80712.44,yfinance,exact,0.0,0.0
+ZOMATO_2023,ZOMATO,2023,current_liabilities,1441.0,1441.0,exact,pdf,R3 only pdf; O agrees,False,1441.0,exact,,not_covered,1441.0,yfinance,exact,0.0,0.0
+ZOMATO_2023,ZOMATO,2023,ebit,-965.9000000000001,-965.9000000000001,exact,pdf,R1 P and L agree (<=0.1%),False,-965.9000000000001,exact,-965.9000000000001,exact,-966.0,screener,within_tolerance,0.0,0.0
+ZOMATO_2023,ZOMATO,2023,inventories,82.7,82.7,exact,pdf,R1 P and L agree (<=0.1%),False,82.7,exact,82.7,exact,83.0,yfinance,near,0.0,0.0
+ZOMATO_2023,ZOMATO,2023,total_assets,21598.7,21598.7,exact,pdf,R1 P and L agree (<=0.1%),False,21598.7,exact,21598.7,exact,21599.0,yfinance,within_tolerance,0.0,0.0
+ZOMATO_2023,ZOMATO,2023,total_equity,19453.2,19453.2,exact,pdf,R1 P and L agree (<=0.1%),False,19453.2,exact,19453.2,exact,19453.0,yfinance,within_tolerance,0.0,0.0
+ZOMATO_2024,ZOMATO,2024,current_liabilities,2083.0,2083.0,exact,pdf,R1 P and L agree (<=0.1%),False,2083.0,exact,2083.0,exact,2083.0,yfinance,exact,0.0,0.0
+ZOMATO_2024,ZOMATO,2024,ebit,363.0,363.0,exact,pdf,R1 P and L agree (<=0.1%),False,363.0,exact,363.0,exact,363.0,screener,exact,0.0,0.0
+ZOMATO_2024,ZOMATO,2024,inventories,88.0,88.0,exact,pdf,R1 P and L agree (<=0.1%),False,88.0,exact,88.0,exact,88.0,yfinance,exact,0.0,0.0
+ZOMATO_2024,ZOMATO,2024,total_assets,23356.0,23356.0,exact,pdf,R1 P and L agree (<=0.1%),False,23356.0,exact,23356.0,exact,23356.0,yfinance,exact,0.0,0.0
+ZOMATO_2024,ZOMATO,2024,total_equity,20406.0,20406.0,exact,pdf,R1 P and L agree (<=0.1%),False,20406.0,exact,20406.0,exact,20406.0,yfinance,exact,0.0,0.0
+ZOMATO_2025,ZOMATO,2025,current_liabilities,3326.0,3326.0,exact,pdf,R1 P and L agree (<=0.1%),False,3326.0,exact,3326.0,exact,3326.0,yfinance,exact,0.0,0.0
+ZOMATO_2025,ZOMATO,2025,ebit,851.0,851.0,exact,pdf,R1 P and L agree (<=0.1%),False,851.0,exact,851.0,exact,851.0,screener,exact,0.0,0.0
+ZOMATO_2025,ZOMATO,2025,inventories,176.0,176.0,exact,pdf,R1 P and L agree (<=0.1%),False,176.0,exact,176.0,exact,176.0,yfinance,exact,0.0,0.0
+ZOMATO_2025,ZOMATO,2025,total_assets,35623.0,35623.0,exact,pdf,R1 P and L agree (<=0.1%),False,35623.0,exact,35623.0,exact,35623.0,yfinance,exact,0.0,0.0
+ZOMATO_2025,ZOMATO,2025,total_equity,30310.0,30310.0,exact,pdf,R1 P and L agree (<=0.1%),False,30310.0,exact,30310.0,exact,30310.0,yfinance,exact,0.0,0.0
+ZOMATO_2026,ZOMATO,2026,current_liabilities,5672.0,5672.0,exact,pdf,R3 only pdf; O agrees,False,5672.0,exact,,not_covered,5672.0,yfinance,exact,0.0,0.0
+ZOMATO_2026,ZOMATO,2026,ebit,1007.0,1007.0,exact,pdf,R1 P and L agree (<=0.1%),False,1007.0,exact,1007.0,exact,1007.0,screener,exact,0.0,0.0
+ZOMATO_2026,ZOMATO,2026,inventories,2181.0,2181.0,exact,pdf,R1 P and L agree (<=0.1%),False,2181.0,exact,2181.0,exact,2181.0,yfinance,exact,0.0,0.0
+ZOMATO_2026,ZOMATO,2026,total_assets,40736.0,40736.0,exact,pdf,R1 P and L agree (<=0.1%),False,40736.0,exact,40736.0,exact,40736.0,yfinance,exact,0.0,0.0
+ZOMATO_2026,ZOMATO,2026,total_equity,30973.0,30973.0,exact,pdf,R1 P and L agree (<=0.1%),False,30973.0,exact,30973.0,exact,30973.0,yfinance,exact,0.0,0.0
